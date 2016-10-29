@@ -12,7 +12,7 @@ The intention is to eliminate repetitive manual code modifications that a develo
 
 With this extension installed Visual Studio will automatically perform a find/replace action on specified file(s) within a specified project upon opening a named solution.
 
-![](AutofindReplace/Resources/ExtensionPreview_175x175.png)
+![](/AutoFindReplace/Resources/ExtensionPreview_175x175.png)
 
 ## Who Is This Extension For ?
 
