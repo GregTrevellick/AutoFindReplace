@@ -4,11 +4,11 @@
     <Identity Id="0EAEA679-4BFB-4E54-B52B-A5F5FD1B523D" Version="1.0" Language="en-US" Publisher="Greg Trevellick" />
     <DisplayName>AutoFindReplace</DisplayName>
     <Description xml:space="preserve">Automatically perform a find/replace action on individual file(s) within a specified project(s) upon opening a named solution. </Description>
-    <MoreInfo>https://github.com/GregTrevellick</MoreInfo>
+    <MoreInfo>https://github.com/GregTrevellick/AutoFindReplace</MoreInfo>
     <License>LICENSE.txt</License>
     <Icon>Resources\ExtensionIcon_32x32.png</Icon>
     <PreviewImage>Resources\ExtensionPreview_175x175.png</PreviewImage>
-    <Tags>visual studio extension, find replace,</Tags>
+    <Tags> automatically find &amp; replace,</Tags>
   </Metadata>
   <Installation>
     <InstallationTarget Id="Microsoft.VisualStudio.Community" Version="[14.0]" />
