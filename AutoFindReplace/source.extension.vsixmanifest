@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<PackageManifest Version="2.0.0" xmlns="http://schemas.microsoft.com/developer/vsx-schema/2011" xmlns:d="http://schemas.microsoft.com/developer/vsx-schema-design/2011">
+  <Metadata>
+    <Identity Id="0EAEA679-4BFB-4E54-B52B-A5F5FD1B523D" Version="1.0" Language="en-US" Publisher="Greg Trevellick" />
+    <DisplayName>AutoFindReplace</DisplayName>
+    <Description xml:space="preserve">Automatically perform a find/replace action on individual file(s) within a specified project(s) upon opening a named solution. </Description>
+    <MoreInfo>https://github.com/GregTrevellick</MoreInfo>
+    <License>LICENSE.txt</License>
+    <Icon>Resources\ExtensionIcon_32x32.png</Icon>
+    <PreviewImage>Resources\ExtensionPreview_175x175.png</PreviewImage>
+    <Tags>visual studio extension, find replace,</Tags>
+  </Metadata>
+  <Installation>
+    <InstallationTarget Id="Microsoft.VisualStudio.Community" Version="[14.0]" />
+  </Installation>
+  <Dependencies>
+    <Dependency Id="Microsoft.Framework.NDP" DisplayName="Microsoft .NET Framework" d:Source="Manual" Version="[4.5,)" />
+    <Dependency Id="Microsoft.VisualStudio.MPF.14.0" DisplayName="Visual Studio MPF 14.0" d:Source="Installed" Version="[14.0]" />
+  </Dependencies>
+  <Assets>
+    <Asset Type="Microsoft.VisualStudio.VsPackage" d:Source="Project" d:ProjectName="%CurrentProject%" Path="|%CurrentProject%;PkgdefProjectOutputGroup|" />
+  </Assets>
+</PackageManifest>
