@@ -1,18 +1,31 @@
 # AutoFindReplace
 
 
-<!-- Update the VS Gallery link after you upload the VSIX-->
 Download this extension from the [VS Gallery](https://visualstudiogallery.msdn.microsoft.com/02a85115-e23c-4e73-af09-957741c4f57d).
 
 ---------------------------------------
 
-A Visual Studio extension to automatically find and replace specified text within specified files when a solution is opened.
+This Visual Studio extension will automatically find and replace specified text within specified files when a solution is opened.
 
 The intention is to eliminate repetitive manual code modifications that a developer may find neccessary for certain Visual Studio solutions.
 
 With this extension installed Visual Studio will automatically perform a find/replace action on specified file(s) within a specified project upon opening a named solution.
 
-![](/AutoFindReplace/Resources/ExtensionPreview_175x175.png)
+If you like this free extension, please give it a [review](https://visualstudiogallery.msdn.microsoft.com/02a85115-e23c-4e73-af09-957741c4f57d).
+
+See the [change log](CHANGELOG.md) for release history.
+
+## Example
+
+The following options settings...
+
+![](/AutoFindReplace/Resources/ScreenShot_General.png)
+
+![](/AutoFindReplace/Resources/ScreenShot_Rules.png)
+
+...result in this outcome:
+
+![](/AutoFindReplace/Resources/ScreenShot_Results.png)
 
 ## Who Is This Extension For ?
 
@@ -23,9 +36,8 @@ Any developer using the Visual Studio IDE (any language, any file type) who curr
  and / or
 
  - It is not possible for the change(s) to be persisted durably in the developer's local file system, for any reason
- 
 
-## Use Cases
+## Use-Cases
 
  - Your source-control system freakishly doesn't retained a file's modifications, and so every time you open a new branch of your solution you need to manually and repeatedly make the same changes to address this. *This was the real-life problem I experienced that inspired me to create this extension.*
  
@@ -36,10 +48,9 @@ Any developer using the Visual Studio IDE (any language, any file type) who curr
  - You have an app.config (or web.config) file, and every time you open a new branch of your solution you need to manually and repeatedly change the connection string from a shared server to localhost, alter a password, change a URL or port number that your app accesses.
 
  - You have a Master Page, and every time you open a new branch of your solution you manually and repeatedly change the page header to contain a phrase such as "Local Work-In-Progress" to aid user interpretation of any screen shots you produce.
-
- - Many more...
-
-
+  
+ - Many more. *If you have a use-case you would like listed here, just let me know via a review on the [VS Gallery](https://visualstudiogallery.msdn.microsoft.com/02a85115-e23c-4e73-af09-957741c4f57d) or via an issue (or even a Pull Request) on the [GitHub repo](https://github.com/GregTrevellick/AutoFindReplace/issues).*
+ 
 ## Features
 
 - Modifications can be limited to files under source control only. This is the default setting, but can be overridden to allow non-source controlled files to be modified.

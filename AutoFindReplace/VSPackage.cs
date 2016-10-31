@@ -25,7 +25,7 @@ namespace AutoFindReplace
         private int changesCount;
         private DTE dte;
         private IList<string> failureMessages;
-        private bool haveWeOpenedTheCorrectSolution;
+        private bool anyRulesProcessed;
         private int rulesEnabledForThisSolutionCount;
         private int rulesProcesssedSuccessfullyCount;
         private int rulesProcesssedUnsuccessfullyCount;
@@ -63,10 +63,11 @@ namespace AutoFindReplace
                     successMessages.Add(applyChangesMessage);
                 }
 
-                if (haveWeOpenedTheCorrectSolution)
+                if (anyRulesProcessed)
                 {
                     summaryMessages = messagesHelper.GetSummaryMessages(rulesEnabledForThisSolutionCount, rulesProcesssedSuccessfullyCount, rulesProcesssedUnsuccessfullyCount, changesCount);
-                    var popUpMessage = messagesHelper.GetPopUpMessage(failureMessages, successMessages, summaryMessages);
+                    var userFriendlySuccessMessages = messagesHelper.GetUserFriendlySuccessMessages(successMessages);
+                    var popUpMessage = messagesHelper.GetPopUpMessage(failureMessages, userFriendlySuccessMessages, summaryMessages);
                     DisplayPopUpMessage(Helpers.Constants.CategoryName + " Results", popUpMessage);
                 }
             }
@@ -82,10 +83,12 @@ namespace AutoFindReplace
             {
                 try
                 {
-                    haveWeOpenedTheCorrectSolution = HaveWeOpenedTheCorrectSolution(rulesDto, dteSolutionFullName);
+                    var haveWeOpenedTheCorrectSolution = HaveWeOpenedTheCorrectSolution(rulesDto, dteSolutionFullName);
 
                     if (haveWeOpenedTheCorrectSolution)
                     {
+                        anyRulesProcessed = true;
+
                         rulesEnabledForThisSolutionCount++;
 
                         var targetFileFullPath = GetTargetFileFullPath(rulesDto, generalOptionsDto, dteSolutionFullName);

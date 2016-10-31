@@ -48,5 +48,10 @@ namespace AutoFindReplace.Helpers
 
             popUpMessage += Environment.NewLine;
         }
+
+        public IEnumerable<string> GetUserFriendlySuccessMessages(IEnumerable<string> successMessages)
+        {
+            return successMessages.Distinct().OrderBy(x => x);
+        }
     }
 }
