@@ -17,3 +17,4 @@ on the official Visual Studio extension gallery.
 
 - [x] De-duplicate and alpha-sort successfull results messages
 - [x] Bug fix for results dialog not appearing under certain circumstances when rules for multiple solutions exist
+- [x] Fix bug whereby exporting rules as CSV crashes if no rules exist

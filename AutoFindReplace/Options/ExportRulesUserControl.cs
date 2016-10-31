@@ -43,7 +43,10 @@ namespace AutoFindReplace.Options
 
         private void ExportRules(string rulesForExport)
         {
-            Clipboard.SetText(rulesForExport);
+            if (!string.IsNullOrEmpty(rulesForExport))
+            {
+                Clipboard.SetText(rulesForExport);
+            }
         }
     }
 }

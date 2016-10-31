@@ -49,7 +49,7 @@ Any developer using the Visual Studio IDE (any language, any file type) who curr
 
  - You have a Master Page, and every time you open a new branch of your solution you manually and repeatedly change the page header to contain a phrase such as "Local Work-In-Progress" to aid user interpretation of any screen shots you produce.
   
- - Many more. *If you have a use-case you would like listed here, just let me know via a review on the [VS Gallery](https://visualstudiogallery.msdn.microsoft.com/02a85115-e23c-4e73-af09-957741c4f57d) or via an issue (or even a Pull Request) on the [GitHub repo](https://github.com/GregTrevellick/AutoFindReplace/issues).*
+ - Many more. *If you have a use-case you would like listed here, just let me know via a review on the [VS Gallery](https://visualstudiogallery.msdn.microsoft.com/02a85115-e23c-4e73-af09-957741c4f57d) or by raising an [issue](https://github.com/GregTrevellick/AutoFindReplace/issues) or  [pull request](https://github.com/GregTrevellick/AutoFindReplace/pulls) on the [GitHub repo](https://github.com/GregTrevellick/AutoFindReplace).*
  
 ## Features
 
