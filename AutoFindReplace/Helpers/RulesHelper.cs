@@ -12,7 +12,7 @@ namespace AutoFindReplace.Helpers
     {
         private static RulesDto rulesDto = new RulesDto();
         private static string settingsInStore;
-        private static bool applyTestRules = false;
+        private static bool applyTestRules = true;
 
         public static List<RulesDto> GetRulesDtos()
         {
@@ -56,36 +56,234 @@ namespace AutoFindReplace.Helpers
 
         private static void ApplyTestingRules(List<RulesDto> rulesDtos)
         {
-            var testingRuleSolutionName = "DummySol.sln";
-            rulesDtos.RemoveAll(x => x.SolutionName == testingRuleSolutionName);
+            //TODO remove duplicate strings below, or better flag these rules with a boolean differentiator
 
-            var proj1 = "DummySubFolder.DummyProj.csproj";
-            var testingRule1 = new RulesDto
+            var allComments = new List<string>
             {
-                CaseSensitive = false,
-                Enabled = true,
-                ProjectName = proj1,
-                FileName = "Dummy.txt",
-                FindWhat = "foo",
-                ReplaceWith = "bar",
-                Comments = "Test rule 1",
-                SolutionName = testingRuleSolutionName,
+                "Another example - ensure your local screenshots reflect WIP",
+                "Another simple example",
+                "Bring your C# copyrights up to date",
+                "Connection string example perhaps",
+                "Make those TODOs consistent !",
+                "None of these will work - the file / project / solution don't exist on disc",
+                "One for luck - a disabled rule",
+                "Same for VB copyrights - casing doesn't matter !",
+                "Simple example",
+                "Solve your colleague's frequent transposing",
+                "This will work - Homer becomes blank (no change there then !)",
+                "This won't work - missing file suffix",
+                "This won't work - missing find text",
+                "This won't work - missing project suffix",
+                "This won't work - missing solution suffix",
+                "This won't work - there are two Duplicate.Any files on disc"
             };
 
-            var testingRule2 = new RulesDto
+            var allSolutionNames = new List<string>
             {
+                "Any.Sln",
+                "dummy",
+                "Dummy.Sln",
+                "IDontExist.Sln",
+                "JoePublic.Sln",
+                "Orwell.Sln",
+                "WebApp.sln"
+            };
+            
+            // Remove any existant test rules
+            rulesDtos.RemoveAll(x => allSolutionNames.Contains(x.SolutionName) && allComments.Contains(x.Comments));
+
+            // Add new rules
+            rulesDtos.Add (new RulesDto
+            {
+                FindWhat = "127.0.0.1",
+                ReplaceWith = "localhost",
+                FileName = "app.config",
+                ProjectName = "JaneDoe.vbproj",
+                SolutionName = "JoePublic.Sln",
+                Enabled = true,
                 CaseSensitive = false,
+                Comments = "Connection string example perhaps"
+            });
+
+            rulesDtos.Add(new RulesDto
+            {
+                FindWhat = "Todo",
+                ReplaceWith = "TODO",
+                FileName = "myclass.cs",
+                ProjectName = "myproj.csproj",
+                SolutionName = "JoePublic.Sln",
                 Enabled = false,
-                ProjectName = proj1,
-                FileName = "Dummy.txt",
+                CaseSensitive = true,
+                Comments = "Make those TODOs consistent !"
+            });
+
+            rulesDtos.Add(new RulesDto
+            {
                 FindWhat = "hello",
                 ReplaceWith = "world",
-                Comments = "Test rule 2",
-                SolutionName = testingRule1.SolutionName,
-            };
+                FileName = "MyClass.cs",
+                ProjectName = "MyProj.csproj",
+                SolutionName = "JoePublic.Sln",
+                Enabled = true,
+                CaseSensitive = true,
+                Comments = "Simple example"
+            });
 
-            rulesDtos.Add(testingRule1);
-            rulesDtos.Add(testingRule2);
+            rulesDtos.Add(new RulesDto
+            {
+                FindWhat = "Hello",
+                ReplaceWith = "World",
+                FileName = "MyClass.cs",
+                ProjectName = "MyProj.csproj",
+                SolutionName = "JoePublic.Sln",
+                Enabled = true,
+                CaseSensitive = true,
+                Comments = "Another simple example"
+            });
+
+            rulesDtos.Add(new RulesDto
+            {
+                FindWhat = "foo",
+                ReplaceWith = "bar",
+                FileName = "Duplicate.Any",
+                ProjectName = "MyProj.csproj",
+                SolutionName = "JoePublic.Sln",
+                Enabled = true,
+                CaseSensitive = false,
+                Comments = "This won't work - there are two Duplicate.Any files on disc"
+            });
+
+            rulesDtos.Add(new RulesDto
+            {
+                FindWhat = "© 1984",
+                ReplaceWith = "© 2016",
+                FileName = "RssFeed.Xml",
+                ProjectName = "George.Csproj",
+                SolutionName = "Orwell.Sln",
+                Enabled = false,
+                CaseSensitive = false,
+                Comments = "One for luck - a disabled rule"
+            });
+
+            rulesDtos.Add(new RulesDto
+            {
+                FindWhat = "copyright 2015",
+                ReplaceWith = "Copyright 2016",
+                FileName = "Licence.txt",
+                ProjectName = "any1.csproj",
+                SolutionName = "any.sln",
+                Enabled = true,
+                CaseSensitive = false,
+                Comments = "Bring your C# copyrights up to date"
+            });
+
+            rulesDtos.Add(new RulesDto
+            {
+                FindWhat = "cOpYrIgHt 2015",
+                ReplaceWith = "Copyright 2016",
+                FileName = "LiCeNcE.tXt",
+                ProjectName = "aNy2.vBpRoJ",
+                SolutionName = "aNy.sLn",
+                Enabled = true,
+                CaseSensitive = false,
+                Comments = "Same for VB copyrights - casing doesn't matter !"
+            });
+
+            rulesDtos.Add(new RulesDto
+            {
+                FindWhat = "often transopsed",
+                ReplaceWith = "often transposed",
+                FileName = "dummy.txt",
+                ProjectName = "dummy.csproj",
+                SolutionName = "dummy.sln",
+                Enabled = true,
+                CaseSensitive = false,
+                Comments = "Solve your colleague's frequent transposing"
+            });
+
+            rulesDtos.Add(new RulesDto
+            {
+                FindWhat = string.Empty,
+                ReplaceWith = "Bart",
+                FileName = "dummy.txt",
+                ProjectName = "dummy.csproj",
+                SolutionName = "dummy.sln",
+                Enabled = true,
+                CaseSensitive = false,
+                Comments = "This won't work - missing find text"
+            });
+
+            rulesDtos.Add(new RulesDto
+            {
+                FindWhat = "Homer",
+                ReplaceWith = string.Empty,
+                FileName = "dummy.txt",
+                ProjectName = "dummy.csproj",
+                SolutionName = "dummy.sln",
+                Enabled = true,
+                CaseSensitive = false,
+                Comments = "This will work - Homer becomes blank (no change there then !)"
+            });
+
+            rulesDtos.Add(new RulesDto
+            {
+                FindWhat = "Homer",
+                ReplaceWith = "Bart",
+                FileName = "dummy",
+                ProjectName = "dummy.csproj",
+                SolutionName = "dummy.sln",
+                Enabled = true,
+                CaseSensitive = false,
+                Comments = "This won't work - missing file suffix"
+            });
+
+            rulesDtos.Add(new RulesDto
+            {
+                FindWhat = "Homer",
+                ReplaceWith = "Bart",
+                FileName = "dummy.txt",
+                ProjectName = "dummy",
+                SolutionName = "dummy.sln",
+                Enabled = true,
+                CaseSensitive = false,
+                Comments = "This won't work - missing project suffix"
+            });
+
+            rulesDtos.Add(new RulesDto
+            {
+                FindWhat = "Homer",
+                ReplaceWith = "Bart",
+                FileName = "dummy.txt",
+                ProjectName = "dummy.csproj",
+                SolutionName = "dummy",
+                Enabled = true,
+                CaseSensitive = false,
+                Comments = "This won't work - missing solution suffix"
+            });
+
+            rulesDtos.Add(new RulesDto
+            {
+                FindWhat = "Marge",
+                ReplaceWith = "Lisa",
+                FileName = "IDontExist.Txt",
+                ProjectName = "IDontExist.Csproj",
+                SolutionName = "IDontExist.Sln",
+                Enabled = true,
+                CaseSensitive = false,
+                Comments = "None of these will work - the file / project / solution don't exist on disc"
+            });
+
+            rulesDtos.Add(new RulesDto
+            {
+                FindWhat = "<title>",
+                ReplaceWith = "<title><strong>W-I-P</strong>",
+                FileName = "Site.Master",
+                ProjectName = "WebApp.csproj",
+                SolutionName = "WebApp.sln",
+                Enabled = false,
+                CaseSensitive = false,
+                Comments = "Another example - ensure your local screenshots reflect WIP"
+            });
         }
     }
 }

@@ -265,7 +265,7 @@ namespace AutoFindReplace
             if (result == vsFindResult.vsFindResultReplaced)
             {
                 changesCount++;
-                findReplaceMessages.Add(rulesDto.FileName + " in " + rulesDto.ProjectName);
+                findReplaceMessages.Add(rulesDto.FileName.ToLower() + " in " + rulesDto.ProjectName.ToLower());
                 dte.ActiveDocument.Save();
             }
 

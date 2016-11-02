@@ -13,7 +13,7 @@ With this extension installed Visual Studio will automatically perform a find/re
 
 If you like this free extension, please give it a [review](https://visualstudiogallery.msdn.microsoft.com/02a85115-e23c-4e73-af09-957741c4f57d).
 
-See the [change log](CHANGELOG.md) for release history.
+See the [change log](CHANGELOG.md) for road map and release history.
 
 ## Example
 
@@ -49,7 +49,7 @@ Any developer using the Visual Studio IDE (any language, any file type) who curr
 
  - You have a Master Page, and every time you open a new branch of your solution you manually and repeatedly change the page header to contain a phrase such as "Local Work-In-Progress" to aid user interpretation of any screen shots you produce.
   
- - Many more. *If you have a use-case you would like listed here, just let me know via a review on the [VS Gallery](https://visualstudiogallery.msdn.microsoft.com/02a85115-e23c-4e73-af09-957741c4f57d) or by raising an [issue](https://github.com/GregTrevellick/AutoFindReplace/issues) or  [pull request](https://github.com/GregTrevellick/AutoFindReplace/pulls) on the [GitHub repo](https://github.com/GregTrevellick/AutoFindReplace).*
+ - Many more. *If you have a use-case you would like listed here, just let me know via a review on the [VS Gallery](https://visualstudiogallery.msdn.microsoft.com/02a85115-e23c-4e73-af09-957741c4f57d) or by raising an [Issue](https://github.com/GregTrevellick/AutoFindReplace/issues) or submitting a [Pull Request](https://github.com/GregTrevellick/AutoFindReplace/pulls).*
  
 ## Features
 
@@ -69,10 +69,18 @@ Any developer using the Visual Studio IDE (any language, any file type) who curr
 
 - If a solution is opened whose name matches a rule, user is shown a summary of any modifications made.
 
+- Incomplete rules (e.g. without a file name) can be specified, and will simply be ignored when specified the solution is opened. 
+
 - Rules can be exported (JSON or CSV format) to clipboard, for sharing amongst colleagues or across different PCs.
+
+
 
 ## Contribute
 Contributions to this project are welcome.
+
+To that end a zip file containing the sample JoePublic.Sln file has been made available [here](xxxxx).
+
+Additionally the rules specified in the example screen shots above can be implemented locally by setting the 'applyTestRules' property of [RulesHelper.cs](xxxxxxxxxx) to 'true'.
 
 For cloning and building this project yourself, make sure to install the [Extensibility Tools 2015](https://visualstudiogallery.msdn.microsoft.com/ab39a092-1343-46e2-b0f1-6a3f91155aa6) extension for Visual Studio which enables some features used by this project.
 
@@ -81,12 +89,14 @@ For cloning and building this project yourself, make sure to install the [Extens
 
 ## Credits
 
-The following articles deserve special mention for their help whilst creating this extension:
+The following authors / articles deserve special mention for their help whilst creating this extension:
 
-http://schmalls.com/2015/01/19/adventures-in-visual-studio-extension-development-part-2
+[Mads Kristensen](https://channel9.msdn.com/Events/Build/2016/B886)
 
-http://blog.slaks.net/2013-11-10/extending-visual-studio-part-2-core-concepts/
+[Joshua Thompson](http://schmalls.com/2015/01/19/adventures-in-visual-studio-extension-development-part-2)
 
-https://github.com/paulcbetts/SaveAllTheTime
+[Slaks.Blog](http://blog.slaks.net/2013-11-10/extending-visual-studio-part-2-core-concepts/)
 
-http://blog.danskingdom.com/category/visual-studio-extensions/
+[Paul Betts](https://github.com/paulcbetts/SaveAllTheTime)
+
+[Daniel Schroeder](http://blog.danskingdom.com/category/visual-studio-extensions/)
