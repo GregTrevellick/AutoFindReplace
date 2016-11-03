@@ -12,7 +12,7 @@ namespace AutoFindReplace.Helpers
     {
         private static RulesDto rulesDto = new RulesDto();
         private static string settingsInStore;
-        private static bool applyTestRules = true;
+        private static bool applyTestRules = true; //gregt set to false
 
         public static List<RulesDto> GetRulesDtos()
         {
@@ -49,50 +49,34 @@ namespace AutoFindReplace.Helpers
         private static void RemoveIncompleteRules(List<RulesDto> rulesDtos)
         {
             rulesDtos.RemoveAll(x => string.IsNullOrEmpty(x.FindWhat));
-            rulesDtos.RemoveAll(x => string.IsNullOrEmpty(x.SolutionName));
-            rulesDtos.RemoveAll(x => string.IsNullOrEmpty(x.ProjectName));
             rulesDtos.RemoveAll(x => string.IsNullOrEmpty(x.FileName));
+            rulesDtos.RemoveAll(x => string.IsNullOrEmpty(x.ProjectName));
+            rulesDtos.RemoveAll(x => string.IsNullOrEmpty(x.SolutionName));
         }
 
         private static void ApplyTestingRules(List<RulesDto> rulesDtos)
         {
-            //TODO remove duplicate strings below, or better flag these rules with a boolean differentiator
+            //TODO add a flag to differentiate these test rules with a user's real rules
 
-            var allComments = new List<string>
-            {
-                "Another example - ensure your local screenshots reflect WIP",
-                "Another simple example",
-                "Bring your C# copyrights up to date",
-                "Connection string example perhaps",
-                "Make those TODOs consistent !",
-                "None of these will work - the file / project / solution don't exist on disc",
-                "One for luck - a disabled rule",
-                "Same for VB copyrights - casing doesn't matter !",
-                "Simple example",
-                "Solve your colleague's frequent transposing",
-                "This will work - Homer becomes blank (no change there then !)",
-                "This won't work - missing file suffix",
-                "This won't work - missing find text",
-                "This won't work - missing project suffix",
-                "This won't work - missing solution suffix",
-                "This won't work - there are two Duplicate.Any files on disc"
-            };
-
-            var allSolutionNames = new List<string>
+            var solutionNames = new List<string>
             {
                 "Any.Sln",
+                "AWebApp.sln",
                 "dummy",
                 "Dummy.Sln",
                 "IDontExist.Sln",
                 "JoePublic.Sln",
                 "Orwell.Sln",
-                "WebApp.sln"
+                "WebApp.sln",//gregt can be deleted 
             };
-            
-            // Remove any existant test rules
-            rulesDtos.RemoveAll(x => allSolutionNames.Contains(x.SolutionName) && allComments.Contains(x.Comments));
 
-            // Add new rules
+            // Remove any existant test rules
+            foreach (var solutionName in solutionNames)
+            {
+                rulesDtos.RemoveAll(x => x.SolutionName.ToLower() == solutionName.ToLower());
+            }
+
+            #region Add new rules
             rulesDtos.Add (new RulesDto
             {
                 FindWhat = "127.0.0.1",
@@ -276,14 +260,15 @@ namespace AutoFindReplace.Helpers
             rulesDtos.Add(new RulesDto
             {
                 FindWhat = "<title>",
-                ReplaceWith = "<title><strong>W-I-P</strong>",
+                ReplaceWith = "<title>W-I-P&nbsp;",
                 FileName = "Site.Master",
-                ProjectName = "WebApp.csproj",
-                SolutionName = "WebApp.sln",
+                ProjectName = "AWebApp.csproj",
+                SolutionName = "AWebApp.sln",
                 Enabled = false,
                 CaseSensitive = false,
                 Comments = "Another example - ensure your local screenshots reflect WIP"
             });
+            #endregion 
         }
     }
 }

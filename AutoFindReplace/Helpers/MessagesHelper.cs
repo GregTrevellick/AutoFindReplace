@@ -12,10 +12,10 @@ namespace AutoFindReplace.Helpers
         {
             var summaryMessages = new List<string>();
 
-            summaryMessages.Add("Rules enabled for this solution:  " + rulesEnabledForThisSolutionCount);
-            summaryMessages.Add("Rules successfully processsed:    " + rulesProcesssedSuccessfullyCount);
+            summaryMessages.Add("Rules enabled for this solution: " + rulesEnabledForThisSolutionCount);
+            summaryMessages.Add("Rules successfully processsed: " + rulesProcesssedSuccessfullyCount);
             summaryMessages.Add("Rules un-successfully processsed: " + rulesProcesssedUnsuccessfullyCount);
-            summaryMessages.Add("Number of files updated: " + changesCount);
+            summaryMessages.Add("Rules resulting in modifications: " + changesCount);
 
             return summaryMessages;
         }
@@ -25,8 +25,8 @@ namespace AutoFindReplace.Helpers
             popUpMessage = string.Empty;
 
             PopulatePopUpMessage(summaryMessages);
-            PopulatePopUpMessage(successMessages, "FILES SUCCESSFULLY CHANGED");
-            PopulatePopUpMessage(failureMessages, "UNSUCCESSFULL UPDATES LOG");
+            PopulatePopUpMessage(successMessages, "FILES MODIFIED");
+            PopulatePopUpMessage(failureMessages, "FAILED RULES");
 
             return popUpMessage;
         }

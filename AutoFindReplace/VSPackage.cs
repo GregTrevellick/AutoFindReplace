@@ -285,7 +285,7 @@ namespace AutoFindReplace
             uiShell.ShowMessageBox(
                 0,
                 ref clsid,
-                title,
+                title.ToUpper(),
                 text,
                 string.Empty,
                 0,
