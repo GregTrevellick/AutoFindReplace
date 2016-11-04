@@ -19,13 +19,13 @@ See the [change log](CHANGELOG.md) for road map and release history.
 
 The following options settings:
 
-![](/AutoFindReplace/Resources/ScreenShot_General.png)
+![](/AutoFindReplace/Resources/ScreenShot_General2.png)
 
-![](/AutoFindReplace/Resources/ScreenShot_Rules.png)
+![](/AutoFindReplace/Resources/ScreenShot_Rules2.png)
 
 Result in the following outcome when you open the JoePublic solution:
 
-![](/AutoFindReplace/Resources/ScreenShot_Results.png)
+![](/AutoFindReplace/Resources/ScreenShot_Results2.png)
 
 ## Who Is This Extension For ?
 
