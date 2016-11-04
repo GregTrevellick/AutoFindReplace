@@ -11,7 +11,6 @@
 
 # Change log
 
-
 These are the changes to each version that has been released
 on the official Visual Studio extension gallery.
 
@@ -25,6 +24,8 @@ on the official Visual Studio extension gallery.
 
 **Coming soon**
 
-- [x] De-duplicate and alpha-sort successfull results messages
+- [x] De-duplicate and alpha-sort successfull Results dialog messages
+- [x] Minor cosmetic enhancements to Options and Results dialog
 - [x] Bug fix for results dialog not appearing under certain circumstances when rules for multiple solutions exist
-- [x] Fix bug whereby exporting rules as CSV crashes if no rules exist
+- [x] Bug fix whereby exporting rules as CSV crashes if no rules exist
+- [x] Bug fix for a non-text file specified in a rule

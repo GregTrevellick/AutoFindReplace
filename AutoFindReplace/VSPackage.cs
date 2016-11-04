@@ -247,26 +247,33 @@ namespace AutoFindReplace
             
             var textDocument = dte.ActiveDocument.Object("TextDocument") as TextDocument;
 
-            var find = textDocument.DTE.Find;
-
-            vsFindOptions vsFindOptions;
-
-            if (rulesDto.CaseSensitive)
+            if (textDocument == null)
             {
-                vsFindOptions = vsFindOptions.vsFindOptionsMatchCase;
+                failureMessages.Add("File " + rulesDto.FileName + " is not an editable text file");
             }
             else
             {
-                vsFindOptions = vsFindOptions.vsFindOptionsFromStart;
-            }
+                var find = textDocument.DTE.Find;
 
-            var result = find.FindReplace(vsFindAction.vsFindActionReplaceAll, rulesDto.FindWhat, (int)vsFindOptions, rulesDto.ReplaceWith, vsFindTarget.vsFindTargetOpenDocuments);
+                vsFindOptions vsFindOptions;
 
-            if (result == vsFindResult.vsFindResultReplaced)
-            {
-                changesCount++;
-                findReplaceMessages.Add(rulesDto.FileName.ToLower() + " in " + rulesDto.ProjectName.ToLower());
-                dte.ActiveDocument.Save();
+                if (rulesDto.CaseSensitive)
+                {
+                    vsFindOptions = vsFindOptions.vsFindOptionsMatchCase;
+                }
+                else
+                {
+                    vsFindOptions = vsFindOptions.vsFindOptionsFromStart;
+                }
+
+                var result = find.FindReplace(vsFindAction.vsFindActionReplaceAll, rulesDto.FindWhat, (int)vsFindOptions, rulesDto.ReplaceWith, vsFindTarget.vsFindTargetOpenDocuments);
+
+                if (result == vsFindResult.vsFindResultReplaced)
+                {
+                    changesCount++;
+                    findReplaceMessages.Add(rulesDto.FileName.ToLower() + " in " + rulesDto.ProjectName.ToLower());
+                    dte.ActiveDocument.Save();
+                }
             }
 
             if (!generalOptionsDto.KeepFileOpenAfterSave)
