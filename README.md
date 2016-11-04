@@ -25,7 +25,7 @@ The following options settings:
 
 For the following solution:
 
-![](/AutoFindReplace/Resources/ScreenShot_Solution.png)
+![](/AutoFindReplace/Resources/Screenshot_Solution.png)
 
 Result in the following outcome when opened:
 
