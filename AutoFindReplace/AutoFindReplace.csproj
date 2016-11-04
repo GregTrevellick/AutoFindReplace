@@ -103,9 +103,9 @@
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
     <Content Include="Resources\ScreenShot_General.png" />
-    <Content Include="Resources\ScreenShot_Results.png" />
     <Content Include="Resources\ScreenShot_ResultsWindow.png" />
     <Content Include="Resources\ScreenShot_Rules.png" />
+    <Content Include="Resources\Screenshot_Solution.png" />
     <Content Include="Resources\VSPackageResx_175x175.ico">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <IncludeInVSIX>true</IncludeInVSIX>
