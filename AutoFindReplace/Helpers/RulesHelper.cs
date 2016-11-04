@@ -12,7 +12,7 @@ namespace AutoFindReplace.Helpers
     {
         private static RulesDto rulesDto = new RulesDto();
         private static string settingsInStore;
-        private static bool applyTestRules = true; //gregt set to false
+        private static bool applyTestRules = false;
 
         public static List<RulesDto> GetRulesDtos()
         {

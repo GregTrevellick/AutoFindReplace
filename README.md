@@ -17,13 +17,13 @@ See the [change log](CHANGELOG.md) for road map and release history.
 
 ## Example
 
-The following options settings...
+The following options settings:
 
 ![](/AutoFindReplace/Resources/ScreenShot_General.png)
 
 ![](/AutoFindReplace/Resources/ScreenShot_Rules.png)
 
-...result in this outcome:
+Result in the following outcome when you open the JoePublic solution:
 
 ![](/AutoFindReplace/Resources/ScreenShot_Results.png)
 
@@ -78,9 +78,9 @@ Any developer using the Visual Studio IDE (any language, any file type) who curr
 ## Contribute
 Contributions to this project are welcome.
 
-To that end a zip file containing the sample JoePublic.Sln file has been made available [here](xxxxx).
+To that end a zip file containing the sample JoePublic.Sln file has been made available [here](https://github.com/GregTrevellick/AutoFindReplace/blob/master/JoePublic.zip).
 
-Additionally the rules specified in the example screen shots above can be implemented locally by setting the 'applyTestRules' property of [RulesHelper.cs](xxxxxxxxxx) to 'true'.
+Additionally the rules specified in the example screen shots above can be implemented locally by setting the 'applyTestRules' property of [RulesHelper.cs](https://github.com/GregTrevellick/AutoFindReplace/blob/master/AutoFindReplace/Helpers/RulesHelper.cs) to 'true'.
 
 For cloning and building this project yourself, make sure to install the [Extensibility Tools 2015](https://visualstudiogallery.msdn.microsoft.com/ab39a092-1343-46e2-b0f1-6a3f91155aa6) extension for Visual Studio which enables some features used by this project.
 
