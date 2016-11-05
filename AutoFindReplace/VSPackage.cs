@@ -87,7 +87,7 @@ namespace AutoFindReplace
 
                     if (haveWeOpenedTheCorrectSolution)
                     {
-                        anyRulesProcessed = true;
+                        anyRulesProcessed = true;   
 
                         rulesEnabledForThisSolutionCount++;
 

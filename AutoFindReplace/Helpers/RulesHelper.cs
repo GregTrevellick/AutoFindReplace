@@ -66,8 +66,7 @@ namespace AutoFindReplace.Helpers
                 "Dummy.Sln",
                 "IDontExist.Sln",
                 "JoePublic.Sln",
-                "Orwell.Sln",
-                "WebApp.sln",//gregt can be deleted 
+                "Orwell.Sln"
             };
 
             // Remove any existant test rules
