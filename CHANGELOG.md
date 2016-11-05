@@ -34,7 +34,7 @@ on the official Visual Studio extension gallery.
 
 ## 1.1
 
-**Coming soon**
+**2016-11-05** 14:20 UK / 14:20 UTC
 
 - [x] De-duplicate and alpha-sort successfull Results dialog messages
 - [x] Minor cosmetic enhancements to Options and Results dialog
