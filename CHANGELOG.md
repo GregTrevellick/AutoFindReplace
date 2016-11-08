@@ -1,7 +1,6 @@
 # Road Map
 
 <!--sign the extension for auto updates-->
-<!--tweet #autofindreplace-->
 <!--rules kick in when opening a file not just a sln-->
 <!--rules kick in when creating a sln-->
 <!--auto column widths-->
