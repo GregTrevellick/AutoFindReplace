@@ -41,9 +41,9 @@ on the official Visual Studio extension gallery.
 - [x] Bug fix whereby exporting rules as CSV crashes if no rules exist
 - [x] Bug fix for a non-text file specified in a rule
 
-## 1.2
+## 1.2.1
 
-**Coming soon**
+**2016-11-09** 13:45 UK / 13:45 UTC
 
-- [ ] Publish the extension for VS2013
-- [ ] Publish the extension for VS2012
+- [x] Publish the extension for VS2013
+- [x] Publish the extension for VS2012
