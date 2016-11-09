@@ -9,7 +9,7 @@
     <ReleaseNotes>https://github.com/GregTrevellick/AutoFindReplace/blob/master/CHANGELOG.md</ReleaseNotes>
     <Icon>Resources\ExtensionIcon_32x32.png</Icon>
     <PreviewImage>Resources\ExtensionPreview_175x175.png</PreviewImage>
-    <Tags>find, replace,  automatic, text, change, controlF, controlH, ctlF, ctlH</Tags>
+    <Tags>find, replace, automatic, text, change, controlF, controlH, ctlF, ctlH</Tags>
   </Metadata>
   <Installation>
     <InstallationTarget Id="Microsoft.VisualStudio.Community" Version="[11.0,14.0]" />
