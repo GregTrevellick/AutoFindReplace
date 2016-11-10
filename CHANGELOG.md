@@ -43,7 +43,7 @@ on the official Visual Studio extension gallery.
 
 ## 1.2.1
 
-**2016-11-09** 13:45 UK / 13:45 UTC
+**2016-11-09** 18:15 UK / 18:15 UTC
 
 - [x] Publish the extension for VS2013
 - [x] Publish the extension for VS2012
