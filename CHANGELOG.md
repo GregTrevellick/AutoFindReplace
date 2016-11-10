@@ -1,9 +1,10 @@
 # Road Map
 
-<!--sign the extension for auto updates-->
+<!--sign the extension - for auto updates ? activity log ?-->
 <!--rules kick in when opening a file not just a sln-->
 <!--rules kick in when creating a sln-->
 <!--auto column widths-->
+<!--commas in csv-->
 
 - [ ] Improvements
    - [ ] Add a count of diabled rules to the Results dialog
