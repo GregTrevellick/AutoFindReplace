@@ -1,9 +1,12 @@
 # AutoFindReplace
 
+[![Build status](https://ci.appveyor.com/api/projects/status/tcugu9rs3ihbgl7o?svg=true)](https://ci.appveyor.com/project/GregTrevellick/autofindreplace)
 
 Download this extension from the [VS Gallery](https://visualstudiogallery.msdn.microsoft.com/02a85115-e23c-4e73-af09-957741c4f57d).
 
 ---------------------------------------
+
+<!--COPY START FOR VS GALLERY-->
 
 This Visual Studio extension will automatically find and replace specified text within specified files when a solution is opened.
 
@@ -11,7 +14,7 @@ The intention is to eliminate repetitive manual code modifications that a develo
 
 With this extension installed Visual Studio will automatically perform a find/replace action on specified file(s) within a specified project upon opening a named solution.
 
-If you like this free extension, please give it a [review](https://visualstudiogallery.msdn.microsoft.com/02a85115-e23c-4e73-af09-957741c4f57d).
+If you like this *free* extension, please give it a [review](https://visualstudiogallery.msdn.microsoft.com/02a85115-e23c-4e73-af09-957741c4f57d).
 
 See the [change log](CHANGELOG.md) for road map and release history.
 
@@ -77,7 +80,7 @@ Any developer using the Visual Studio IDE (any language, any file type) who curr
 
 - Rules can be exported (JSON or CSV format) to clipboard, for sharing amongst colleagues or across different PCs.
 
-
+<!--COPY END FOR VS GALLERY-->
 
 ## Contribute
 Contributions to this project are welcome.
