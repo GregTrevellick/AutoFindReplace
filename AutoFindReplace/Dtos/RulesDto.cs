@@ -48,7 +48,7 @@
                                     var caseSensitive = CaseSensitive ? "case-sensitive" : "case-insensitive";
                                     return
                                             @"Whenever a solution named """ + SolutionName + @"""" +
-                                            @" is opened, any occurences of the text """ + FindWhat + @"""" +
+                                            @" is opened, any occurrences of the text """ + FindWhat + @"""" +
                                             @" (" + caseSensitive + ")" +
                                             @" within the file """ + FileName + @"""" +
                                             @" in the project """ + ProjectName + @"""" +
