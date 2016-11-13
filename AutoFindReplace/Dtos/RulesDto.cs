@@ -54,7 +54,6 @@
                                             @" in the project """ + ProjectName + @"""" +
                                             @" will be replaced with the text """ + ReplaceWith + @"""" +
                                             @", subject to any source-control restrictions.";
-
                                 }
                             }
                         }
