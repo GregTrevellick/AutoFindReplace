@@ -1,6 +1,7 @@
 # AutoFindReplace
 
 [![Build status](https://ci.appveyor.com/api/projects/status/tcugu9rs3ihbgl7o?svg=true)](https://ci.appveyor.com/project/GregTrevellick/autofindreplace)
+![License](https://img.shields.io/github/license/gittools/gitlink.svg)
 
 Download this extension from the [VS Gallery](https://visualstudiogallery.msdn.microsoft.com/02a85115-e23c-4e73-af09-957741c4f57d).
 
