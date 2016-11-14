@@ -17,9 +17,9 @@
    - [ ] Publish the extension for VS2005 
    - [ ] Publish the extension for VS2008 
    - [ ] Publish the extension for VS2010 
-   - [ ] Publish the extension for VS15 (in due course)
+   - [ ] Publish the extension for VS15
 
-- [ ] Convert codebase to .Net Core (no timescale)
+- [ ] Convert codebase to .Net Core
 
 # Change log
 
@@ -28,23 +28,31 @@ on the official Visual Studio extension gallery.
 
 ## 1.0
 
-**2016-10-29** 17:30 UK / 16:30 UTC
+**2016-10-29** <!--17:30 UK / 16:30 UTC-->
 
 - [x] Initial release
 
 ## 1.1
 
-**2016-11-05** 14:20 UK / 14:20 UTC
+**2016-11-05** <!--14:20 UK / 14:20 UTC-->
 
 - [x] De-duplicate and alpha-sort successfull Results dialog messages
 - [x] Minor cosmetic enhancements to Options and Results dialog
-- [x] Bug fix for results dialog not appearing under certain circumstances when rules for multiple solutions exist
-- [x] Bug fix whereby exporting rules as CSV crashes if no rules exist
-- [x] Bug fix for a non-text file specified in a rule
+- [x] Bug fixes
+  - [x] Results dialog not appearing under certain circumstances when rules for multiple solutions exist
+  - [x] Exporting rules as CSV crashes if no rules exist
+  - [x] Crash when a non-text file specified in a rule
 
 ## 1.2.1
 
-**2016-11-09** 18:15 UK / 18:15 UTC
+**2016-11-09** <!--18:15 UK / 18:15 UTC-->
 
 - [x] Publish the extension for VS2013
 - [x] Publish the extension for VS2012
+
+## 1.2.20
+
+**2016-11-14** <!--07:45 UK / 07:45 UTC-->
+
+- [x] Bug fix
+  - [x] GitHub issue [#1](https://github.com/GregTrevellick/AutoFindReplace/issues/1) - Files not auto changed when outside the root of the solution file
