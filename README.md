@@ -2,6 +2,9 @@
 
 [![Build status](https://ci.appveyor.com/api/projects/status/tcugu9rs3ihbgl7o?svg=true)](https://ci.appveyor.com/project/GregTrevellick/autofindreplace)
 ![License](https://img.shields.io/github/license/gittools/gitlink.svg)
+![](https://vsmarketplacebadge.apphb.com/version/GregTrevellick.AutoFindReplace.svg)
+![](https://vsmarketplacebadge.apphb.com/installs/GregTrevellick.AutoFindReplace.svg)
+![](https://vsmarketplacebadge.apphb.com/rating/GregTrevellick.AutoFindReplace.svg)
 
 Download this extension from the [VS Gallery](https://visualstudiogallery.msdn.microsoft.com/02a85115-e23c-4e73-af09-957741c4f57d).
 
@@ -98,6 +101,8 @@ For cloning and building this project yourself, make sure to install the [Extens
 ## Credits
 
 The following authors / articles deserve special mention for their help whilst creating this extension:
+
+[Sho Sato](https://vsmarketplacebadge.apphb.com/)
 
 [Mads Kristensen](https://channel9.msdn.com/Events/Build/2016/B886)
 
