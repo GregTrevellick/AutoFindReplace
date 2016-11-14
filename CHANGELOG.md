@@ -1,6 +1,6 @@
 # Road Map
 
-<!--sign the extension - for auto updates ? activity log ?-->
+<!--sign the extension - not required for auto updates ! activity log ?-->
 <!--rules kick in when opening a file not just a sln-->
 <!--rules kick in when creating a sln-->
 <!--auto column widths-->
