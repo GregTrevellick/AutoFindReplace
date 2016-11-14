@@ -1,5 +1,6 @@
 # Road Map
 
+<!--badge for VS extension-->
 <!--sign the extension - for auto updates ? activity log ?-->
 <!--rules kick in when opening a file not just a sln-->
 <!--rules kick in when creating a sln-->
@@ -50,9 +51,9 @@ on the official Visual Studio extension gallery.
 - [x] Publish the extension for VS2013
 - [x] Publish the extension for VS2012
 
-## 1.2.20
+## 1.2.19
 
-**2016-11-14** <!--07:45 UK / 07:45 UTC-->
+**2016-11-14** <!--08:00 UK / 08:00 UTC-->
 
 - [x] Bug fix
   - [x] GitHub issue [#1](https://github.com/GregTrevellick/AutoFindReplace/issues/1) - Files not auto changed when outside the root of the solution file
