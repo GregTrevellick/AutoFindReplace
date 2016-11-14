@@ -1,6 +1,5 @@
 # Road Map
 
-<!--badge for VS extension-->
 <!--sign the extension - for auto updates ? activity log ?-->
 <!--rules kick in when opening a file not just a sln-->
 <!--rules kick in when creating a sln-->
