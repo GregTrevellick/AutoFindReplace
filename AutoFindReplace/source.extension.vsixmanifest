@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <PackageManifest Version="2.0.0" xmlns="http://schemas.microsoft.com/developer/vsx-schema/2011" xmlns:d="http://schemas.microsoft.com/developer/vsx-schema-design/2011">
   <Metadata>
-    <Identity Id="0EAEA679-4BFB-4E54-B52B-A5F5FD1B523D" Version="1.2.1" Language="en-US" Publisher="Greg Trevellick" />
+    <Identity Id="0EAEA679-4BFB-4E54-B52B-A5F5FD1B523D" Version="1.2.19" Language="en-US" Publisher="Greg Trevellick" />
     <DisplayName>AutoFindReplace</DisplayName>
     <Description xml:space="preserve">Automatically perform a find/replace action on individual file(s) within a specified project(s) upon opening a named solution. </Description>
     <MoreInfo>https://github.com/GregTrevellick/AutoFindReplace</MoreInfo>

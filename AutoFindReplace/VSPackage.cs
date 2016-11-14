@@ -22,14 +22,15 @@ namespace AutoFindReplace
     [ProvideOptionPage(typeof(ExportRules), Helpers.Constants.CategoryName, "Export", 0, 0, true)]
     public sealed class VSPackage : Package
     {
+        private bool anyRulesProcessed;
         private int changesCount;
         private DTE dte;
         private IList<string> failureMessages;
-        private bool anyRulesProcessed;
+        private Dictionary<string, string> projectPaths;
         private int rulesEnabledForThisSolutionCount;
         private int rulesProcesssedSuccessfullyCount;
         private int rulesProcesssedUnsuccessfullyCount;
-
+        
         public VSPackage()
         {
         }
@@ -63,7 +64,7 @@ namespace AutoFindReplace
                     successMessages.Add(applyChangesMessage);
                 }
 
-                if (anyRulesProcessed)
+                if (anyRulesProcessed || failureMessages.Count > 0)
                 {
                     summaryMessages = messagesHelper.GetSummaryMessages(rulesEnabledForThisSolutionCount, rulesProcesssedSuccessfullyCount, rulesProcesssedUnsuccessfullyCount, changesCount);
                     var userFriendlySuccessMessages = messagesHelper.GetUserFriendlySuccessMessages(successMessages);
@@ -87,11 +88,12 @@ namespace AutoFindReplace
 
                     if (haveWeOpenedTheCorrectSolution)
                     {
-                        anyRulesProcessed = true;   
-
+                        projectPaths = new Dictionary<string, string>();
+                        SetProjectPaths();
+                        anyRulesProcessed = true;
                         rulesEnabledForThisSolutionCount++;
 
-                        var targetFileFullPath = GetTargetFileFullPath(rulesDto, generalOptionsDto, dteSolutionFullName);
+                        var targetFileFullPath = GetTargetFileFullPath(rulesDto, generalOptionsDto);
 
                         if (!string.IsNullOrEmpty(targetFileFullPath))
                         {
@@ -113,11 +115,20 @@ namespace AutoFindReplace
             return applyChangesMessages;
         }
 
-        private string GetTargetFileFullPath(RulesDto rulesDto, GeneralOptionsDto generalOptionsDto, string dteSolutionFullName)
+        private void SetProjectPaths()
         {
-            var actualSolutionPath = Path.GetDirectoryName(dteSolutionFullName);
+            for (int i = 0; i < dte.Solution.Projects.Count; i++)
+            {
+                var item = dte.Solution.Projects.Item(i + 1);
+                var projectPath = Path.GetDirectoryName(item.FullName);
+                var projectName = item.FullName.TrimPrefix(projectPath).TrimPrefix(@"\");
+                projectPaths.Add(projectName, projectPath);
+            }
+        }
 
-            var actualProjectPath = GetProjectPathWithinSolutionDirectory(rulesDto.ProjectName, actualSolutionPath);
+        private string GetTargetFileFullPath(RulesDto rulesDto, GeneralOptionsDto generalOptionsDto)
+        {
+            var actualProjectPath = GetProjectPath(rulesDto.ProjectName);
 
             if (!string.IsNullOrEmpty(actualProjectPath))
             {
@@ -153,14 +164,13 @@ namespace AutoFindReplace
             rulesProcesssedUnsuccessfullyCount = 0;
         }
 
-        private string GetProjectPathWithinSolutionDirectory(string projectName, string actualSolutionPath)
+         private string GetProjectPath(string projectName)
         {
-            var projectFilePath = FindFilePathWithinParentPath(projectName, actualSolutionPath);
+            var projectFilePath = projectPaths.Where(x => x.Key == projectName).FirstOrDefault().Value;
 
             if (!string.IsNullOrEmpty(projectFilePath))
             {
-                var projectFolderPath = projectFilePath.TrimSuffix(projectName);
-                return projectFolderPath;
+                return projectFilePath;
             }
             else
             {
