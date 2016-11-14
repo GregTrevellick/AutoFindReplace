@@ -120,9 +120,12 @@ namespace AutoFindReplace
             for (int i = 0; i < dte.Solution.Projects.Count; i++)
             {
                 var item = dte.Solution.Projects.Item(i + 1);
-                var projectPath = Path.GetDirectoryName(item.FullName);
-                var projectName = item.FullName.TrimPrefix(projectPath).TrimPrefix(@"\");
-                projectPaths.Add(projectName, projectPath);
+                if (item.Name != "Solution Items" && !string.IsNullOrEmpty(item.FullName))
+                {
+                    var projectPath = Path.GetDirectoryName(item.FullName);
+                    var projectName = item.FullName.TrimPrefix(projectPath).TrimPrefix(@"\");
+                    projectPaths.Add(projectName, projectPath);
+                }
             }
         }
 
