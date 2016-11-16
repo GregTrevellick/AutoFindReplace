@@ -117,14 +117,29 @@ namespace AutoFindReplace
 
         private void SetProjectPaths()
         {
+            //Debugger;//gregt
+
             for (int i = 0; i < dte.Solution.Projects.Count; i++)
             {
                 var item = dte.Solution.Projects.Item(i + 1);
-                if (item.Name != "Solution Items" && !string.IsNullOrEmpty(item.FullName))
+                if (item.Name != "Solution Items")
                 {
-                    var projectPath = Path.GetDirectoryName(item.FullName);
-                    var projectName = item.FullName.TrimPrefix(projectPath).TrimPrefix(@"\");
-                    projectPaths.Add(projectName, projectPath);
+                    if (string.IsNullOrEmpty(item.FullName))
+                    {
+                        for (int j = 0; j < item.ProjectItems.Count; j++)
+                        {
+                            var projectItem = item.ProjectItems.Item(j + 1);
+                            var projectPath = Path.GetDirectoryName(projectItem.Name);
+                            var projectName = projectItem.Name.TrimPrefix(projectPath).TrimPrefix(@"\");
+                            projectPaths.Add(projectName, projectPath);
+                        }
+                    }
+                    else
+                    { 
+                        var projectPath = Path.GetDirectoryName(item.FullName);
+                        var projectName = item.FullName.TrimPrefix(projectPath).TrimPrefix(@"\");
+                        projectPaths.Add(projectName, projectPath);
+                    }
                 }
             }
         }

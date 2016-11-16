@@ -1,11 +1,5 @@
 # Road Map
 
-<!--sign the extension - not required for auto updates ! activity log ?-->
-<!--rules kick in when opening a file not just a sln-->
-<!--rules kick in when creating a sln-->
-<!--auto column widths-->
-<!--commas in csv-->
-
 - [ ] Improvements
    - [ ] Add a count of diabled rules to the Results dialog
    - [ ] Mark new rules as Enabled by default
@@ -56,3 +50,20 @@ on the official Visual Studio extension gallery.
 
 - [x] Bug fix
   - [x] GitHub issue [#1](https://github.com/GregTrevellick/AutoFindReplace/issues/1) - Files not auto changed when outside the root of the solution file
+
+<!--move licence.txt up a level like filesforeverysuffix-->
+<!--guthub/linguist-->
+<!--eliminate build warnings-->
+<!--codeship-->
+<!--team city-->
+<!--tfs-->
+<!--jenkins-->
+<!--travis //travis-ci.org/getting_started //docs.travis-ci.com/user/languages/csharp/ //github.com/mwrock/PowerShell/blob/master/.travis.yml-->
+<!--https://github.com/integrations/sonarqube-->
+<!--https://github.com/integrations/codacy-->
+<!--https://github.com/integrations/code-climate-->
+<!--sign the extension - not required for auto updates ! activity log ? github.com/mwrock/PowerShell/tree/master/src/signing-->
+<!--rules kick in when opening a file not just a sln-->
+<!--rules kick in when creating a sln-->
+<!--auto column widths-->
+<!--commas in csv-->
