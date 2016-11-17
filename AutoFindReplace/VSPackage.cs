@@ -118,76 +118,124 @@ namespace AutoFindReplace
 
         private void SetProjectPaths()
         {
-            //for (int i = 0; i < dte.Solution.Projects.Count; i++)
-            //{
-            //    var item = dte.Solution.Projects.Item(i + 1);
-            //    if (item.Name != "Solution Items")
-            //    {
-            //        if (string.IsNullOrEmpty(item.FullName))
-            //        {
-            //            for (int j = 0; j < item.ProjectItems.Count; j++)
-            //            {
-            //                var projectItem = item.ProjectItems.Item(j + 1);
-            //                var projectPath = Path.GetDirectoryName(projectItem.Name);
-            //                var projectName = projectItem.Name.TrimPrefix(projectPath).TrimPrefix(@"\");
-            //                projectPaths.Add(projectName, projectPath);
-            //            }
-            //        }
-            //        else
-            //        { 
-            //            var projectPath = Path.GetDirectoryName(item.FullName);
-            //            var projectName = item.FullName.TrimPrefix(projectPath).TrimPrefix(@"\");
-            //            projectPaths.Add(projectName, projectPath);
-            //        }
-            //    }
-            //}
-
-            //http://stackoverflow.com/questions/38740773/how-to-get-project-inside-of-solution-folder-in-vsix-project
-            //if (Scope == EnvDTE.vsBuildScope.vsBuildScopeSolution)
-            //{
-            //errorListProvider.Tasks.Clear();
-            DTE2 dte2 = Package.GetGlobalService(typeof(DTE)) as DTE2;
-            var sol = dte2.Solution;
-            var projs = sol.Projects;
-            foreach (var proj in sol)
+            for (int i = 0; i < dte.Solution.Projects.Count; i++)
             {
-                var project = proj as Project;
-                if (project.Kind == ProjectKinds.vsProjectKindSolutionFolder)
+                var item = dte.Solution.Projects.Item(i + 1);
+                if (item.Name != "Solution Items")
                 {
-                    var innerProjects = GetSolutionFolderProjects(project);
-                    foreach (var innerProject in innerProjects)
+                    if (string.IsNullOrEmpty(item.FullName))
                     {
-                        //carry out actions here.
+                        for (int j = 0; j < item.ProjectItems.Count; j++)
+                        {
+                            var projectItem = item.ProjectItems.Item(j + 1);
+                            var projectPath = Path.GetDirectoryName(projectItem.Name);
+                            var projectName = projectItem.Name.TrimPrefix(projectPath).TrimPrefix(@"\");
+                            projectPaths.Add(projectName, projectPath);
+                        }
+                    }
+                    else
+                    {
+                        var projectPath = Path.GetDirectoryName(item.FullName);
+                        var projectName = item.FullName.TrimPrefix(projectPath).TrimPrefix(@"\");
+                        projectPaths.Add(projectName, projectPath);
                     }
                 }
             }
+
+            //var fullNames = new List<string>();
+            //var sol = dte.Solution;
+            //var projs = sol.Projects;
+
+            ////////DTE2 dte2 = Package.GetGlobalService(typeof(DTE)) as DTE2;
+            ////////var sol = dte2.Solution;
+            ////////var projs = sol.Projects;
+            //foreach (var proj in sol)//eh - just 1 item in 'sol' surely ? shouldn't this be 'var proj in projs' ?
+            //{
+            //    var fullName = string.Empty;
+
+            //    var project = proj as Project;
+            //    if (project.Kind == ProjectKinds.vsProjectKindSolutionFolder)
+            //    {
+            //        var innerProjects = GetSolutionFolderProjects(project);
+            //        foreach (var innerProject in innerProjects)
+            //        {
+            //            //carry out actions here.
+            //        }
+            //    }
+
+            //    if (!string.IsNullOrEmpty(fullName))
+            //    {
+            //        fullNames.Add(fullName);
+            //    }
+            //}
+            ////////}
+
+            //foreach(var fullName in fullNames)
+            //{
+            //    var projectPath = Path.GetDirectoryName(fullName);
+            //    var projectName = fullName.TrimPrefix(projectPath).TrimPrefix(@"\");
+            //    projectPaths.Add(projectName, projectPath);
             //}
         }
 
-        private IEnumerable<Project> GetSolutionFolderProjects(Project project)
-        {
-            List<Project> projects = new List<Project>();
-            var y = (project.ProjectItems as ProjectItems).Count;
-            for (var i = 1; i <= y; i++)
-            {
-                var x = project.ProjectItems.Item(i).SubProject;
-                var subProject = x as Project;
-                if (subProject != null)
-                {
-                    var projectPath = Path.GetDirectoryName(x.FullName);
-                    var projectName = x.FullName.TrimPrefix(projectPath).TrimPrefix(@"\");
-                    projectPaths.Add(projectName, projectPath);
-                }
-            }
+        //private IEnumerable<Project> GetSolutionFolderProjects(Project project)
+        //{
+        //    List<Project> projects = new List<Project>();
+        //    var y = (project.ProjectItems as ProjectItems).Count;
+        //    for (var i = 1; i <= y; i++)
+        //    {
+        //        var x2 = project.ProjectItems.Item(i);
 
-            return projects;
-        }
+        //        if (project.Kind == ProjectKinds.vsProjectKindSolutionFolder)
+        //        {
+        //            //???
+        //            var innerProjects2  = GetSolutionFolderProjects2(project);
+        //        }
+        //        else
+        //        {
+        //            var x = x2.SubProject;
+        //            var subProject = x as Project;
+        //            if (subProject != null)
+        //            {
+        //                var projectPath = Path.GetDirectoryName(x.FullName);
+        //                var projectName = x.FullName.TrimPrefix(projectPath).TrimPrefix(@"\");
+        //                projectPaths.Add(projectName, projectPath);
+        //            }
+        //        }
+        //    }
 
+        //    return projects;
+        //}
 
+        //private IEnumerable<Project> GetSolutionFolderProjects2(Project project)
+        //{
+        //    List<Project> projects = new List<Project>();
+        //    var y = (project.ProjectItems as ProjectItems).Count;
+        //    for (var i = 1; i <= y; i++)
+        //    {
+        //        var x2 = project.ProjectItems.Item(i);
 
+        //        if (project.Kind == ProjectKinds.vsProjectKindSolutionFolder)
+        //        {
+        //            //???
+        //        }
+        //        else
+        //        {
+        //            var x = x2.SubProject;
+        //            var subProject = x as Project;
+        //            if (subProject != null)
+        //            {
+        //                var projectPath = Path.GetDirectoryName(x.FullName);
+        //                var projectName = x.FullName.TrimPrefix(projectPath).TrimPrefix(@"\");
+        //                projectPaths.Add(projectName, projectPath);
+        //            }
+        //        }
+        //    }
 
+        //    return projects;
+        //}
 
-
+        //gregt
         private string GetTargetFileFullPath(RulesDto rulesDto, GeneralOptionsDto generalOptionsDto)
         {
             var actualProjectPath = GetProjectPath(rulesDto.ProjectName);
@@ -226,7 +274,8 @@ namespace AutoFindReplace
             rulesProcesssedUnsuccessfullyCount = 0;
         }
 
-         private string GetProjectPath(string projectName)
+        //gregt
+        private string GetProjectPath(string projectName)
         {
             var projectFilePath = projectPaths.Where(x => x.Key == projectName).FirstOrDefault().Value;
 
@@ -240,11 +289,13 @@ namespace AutoFindReplace
             }
         }
 
+        //gregt
         private string GetFilePathWithinProjectDirectory(string fileName, string actualProjectPath)
         {
             return FindFilePathWithinParentPath(fileName, actualProjectPath);
         }
 
+        //gregt
         private string FindFilePathWithinParentPath(string fileToFind, string parentPath)
         {
             var matchingNameFiles = Directory.GetFiles(parentPath, fileToFind, SearchOption.AllDirectories);

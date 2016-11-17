@@ -51,6 +51,10 @@ on the official Visual Studio extension gallery.
 - [x] Bug fix
   - [x] GitHub issue [#1](https://github.com/GregTrevellick/AutoFindReplace/issues/1) - Files not auto changed when outside the root of the solution file
 
+
+
+<!--ADD A CREDIT TO & VOTE UP & RETWEET http://stackoverflow.com/questions/38740773/how-to-get-project-inside-of-solution-folder-in-vsix-project-->
+
 <!--move licence.txt up a level like filesforeverysuffix-->
 <!--guthub/linguist-->
 <!--eliminate build warnings-->
