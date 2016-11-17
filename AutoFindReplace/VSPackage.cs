@@ -2,6 +2,7 @@
 using AutoFindReplace.Helpers;
 using AutoFindReplace.Options;
 using EnvDTE;
+using EnvDTE80;
 using Microsoft.VisualStudio.Shell;
 using Microsoft.VisualStudio.Shell.Interop;
 using System;
@@ -117,32 +118,75 @@ namespace AutoFindReplace
 
         private void SetProjectPaths()
         {
-            //Debugger;//gregt
+            //for (int i = 0; i < dte.Solution.Projects.Count; i++)
+            //{
+            //    var item = dte.Solution.Projects.Item(i + 1);
+            //    if (item.Name != "Solution Items")
+            //    {
+            //        if (string.IsNullOrEmpty(item.FullName))
+            //        {
+            //            for (int j = 0; j < item.ProjectItems.Count; j++)
+            //            {
+            //                var projectItem = item.ProjectItems.Item(j + 1);
+            //                var projectPath = Path.GetDirectoryName(projectItem.Name);
+            //                var projectName = projectItem.Name.TrimPrefix(projectPath).TrimPrefix(@"\");
+            //                projectPaths.Add(projectName, projectPath);
+            //            }
+            //        }
+            //        else
+            //        { 
+            //            var projectPath = Path.GetDirectoryName(item.FullName);
+            //            var projectName = item.FullName.TrimPrefix(projectPath).TrimPrefix(@"\");
+            //            projectPaths.Add(projectName, projectPath);
+            //        }
+            //    }
+            //}
 
-            for (int i = 0; i < dte.Solution.Projects.Count; i++)
+            //http://stackoverflow.com/questions/38740773/how-to-get-project-inside-of-solution-folder-in-vsix-project
+            //if (Scope == EnvDTE.vsBuildScope.vsBuildScopeSolution)
+            //{
+            //errorListProvider.Tasks.Clear();
+            DTE2 dte2 = Package.GetGlobalService(typeof(DTE)) as DTE2;
+            var sol = dte2.Solution;
+            var projs = sol.Projects;
+            foreach (var proj in sol)
             {
-                var item = dte.Solution.Projects.Item(i + 1);
-                if (item.Name != "Solution Items")
+                var project = proj as Project;
+                if (project.Kind == ProjectKinds.vsProjectKindSolutionFolder)
                 {
-                    if (string.IsNullOrEmpty(item.FullName))
+                    var innerProjects = GetSolutionFolderProjects(project);
+                    foreach (var innerProject in innerProjects)
                     {
-                        for (int j = 0; j < item.ProjectItems.Count; j++)
-                        {
-                            var projectItem = item.ProjectItems.Item(j + 1);
-                            var projectPath = Path.GetDirectoryName(projectItem.Name);
-                            var projectName = projectItem.Name.TrimPrefix(projectPath).TrimPrefix(@"\");
-                            projectPaths.Add(projectName, projectPath);
-                        }
-                    }
-                    else
-                    { 
-                        var projectPath = Path.GetDirectoryName(item.FullName);
-                        var projectName = item.FullName.TrimPrefix(projectPath).TrimPrefix(@"\");
-                        projectPaths.Add(projectName, projectPath);
+                        //carry out actions here.
                     }
                 }
             }
+            //}
         }
+
+        private IEnumerable<Project> GetSolutionFolderProjects(Project project)
+        {
+            List<Project> projects = new List<Project>();
+            var y = (project.ProjectItems as ProjectItems).Count;
+            for (var i = 1; i <= y; i++)
+            {
+                var x = project.ProjectItems.Item(i).SubProject;
+                var subProject = x as Project;
+                if (subProject != null)
+                {
+                    var projectPath = Path.GetDirectoryName(x.FullName);
+                    var projectName = x.FullName.TrimPrefix(projectPath).TrimPrefix(@"\");
+                    projectPaths.Add(projectName, projectPath);
+                }
+            }
+
+            return projects;
+        }
+
+
+
+
+
 
         private string GetTargetFileFullPath(RulesDto rulesDto, GeneralOptionsDto generalOptionsDto)
         {
