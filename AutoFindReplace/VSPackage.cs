@@ -2,7 +2,7 @@
 using AutoFindReplace.Helpers;
 using AutoFindReplace.Options;
 using EnvDTE;
-using EnvDTE80;
+//using EnvDTE80;
 using Microsoft.VisualStudio.Shell;
 using Microsoft.VisualStudio.Shell.Interop;
 using System;
@@ -44,10 +44,29 @@ namespace AutoFindReplace
             dte = serviceContainer.GetService(typeof(SDTE)) as DTE;
             var solutionEvents = dte.Events.SolutionEvents;
             solutionEvents.Opened += OnSolutionOpened;
+
+
+            string msg = "";
+            Projects prjs = dte.Solution.Projects;
+            foreach (Project prj in prjs)
+            {
+                msg += "NAME: " + prj.UniqueName + "TYPE: " + prj.Kind + " ";// + prj.FullName + " ";
+            }
         }
 
         private void OnSolutionOpened()
         {
+            string msg = "";
+            Projects prjs = dte.Solution.Projects;
+            foreach (Project prj in prjs)
+            {
+                msg += "NAME: " + prj.UniqueName + "TYPE: " + prj.Kind + " ";// + prj.FullName + " ";
+            }
+
+
+
+
+
             var messagesHelper = new MessagesHelper();
 
             failureMessages = new List<string>();
