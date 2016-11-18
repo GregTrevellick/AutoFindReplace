@@ -48,6 +48,27 @@ namespace AutoFindReplace
 
         private void OnSolutionOpened()
         {
+
+
+            string msg = "";
+            Projects prjs = dte.Solution.Projects;
+            foreach (Project prj in prjs)
+            {
+                msg += "NAME: " + prj.UniqueName + " " + Environment.NewLine;// & "TYPE: " & prj.Kind & vbCr
+            }
+
+
+
+            //NAME: Solution Items{ 5B9E7010 - 9C34 - 4FA3 - AED6 - AD26E2C6C9CB}
+            //NAME: SiDem2.ClientWrappers{ FC3FBD6D - 58EB - 42EF - 90E4 - 6FFBC33C18FC}
+            //NAME: SiDem2.BL{ 89F6A61A - 834C - 42D2 - 85D3 - 6756AAE294D1}
+            //NAME: SiDem2.Levi9.PL{ 39EADEC9 - F559 - 49E0 - BB81 - BE1E68965593}
+            //NAME: SiDem2.PL{ 6DC4E2EA - F5F6 - 4296 - B7F8 - BD23886BCC5C}
+            //NAME: Externals{ FC6F4743 - E078 - 4071 - 859A - 75C5307DD0BB}
+            //NAME: Broker{ E239A8BE - 3A0D - 4723 - A559 - 03D28B3A766B}
+
+
+
             var messagesHelper = new MessagesHelper();
 
             failureMessages = new List<string>();
