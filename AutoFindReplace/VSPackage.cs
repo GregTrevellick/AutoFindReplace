@@ -159,7 +159,6 @@ namespace AutoFindReplace
             }
         }
 
-        //gregt
         private string GetTargetFileFullPath(RulesDto rulesDto, GeneralOptionsDto generalOptionsDto)
         {
             var actualProjectPath = GetProjectPath(rulesDto.ProjectName);
@@ -198,7 +197,6 @@ namespace AutoFindReplace
             rulesProcesssedUnsuccessfullyCount = 0;
         }
 
-        //gregt
         private string GetProjectPath(string projectName)
         {
             var projectFilePath = projectPaths.Where(x => x.Key == projectName).FirstOrDefault().Value;
@@ -213,14 +211,7 @@ namespace AutoFindReplace
             }
         }
 
-        //gregt
-        private string GetFilePathWithinProjectDirectory(string fileName, string actualProjectPath)
-        {
-            return FindFilePathWithinParentPath(fileName, actualProjectPath);
-        }
-
-        //gregt
-        private string FindFilePathWithinParentPath(string fileToFind, string parentPath)
+        private string GetFilePathWithinProjectDirectory(string fileToFind, string parentPath)
         {
             var matchingNameFiles = Directory.GetFiles(parentPath, fileToFind, SearchOption.AllDirectories);
             if (matchingNameFiles.Count() == 1)
@@ -264,15 +255,6 @@ namespace AutoFindReplace
 
             return fileIsEligibleToBeChanged;
         }
-
-        //private bool HaveWeOpenedTheCorrectSolution(RulesDto rulesDto, string dteSolutionFullName)
-        //{
-            //var actualSolutionPathArray = dteSolutionFullName.Split('\\');
-            //var actualSolutionName = actualSolutionPathArray.Last();
-            //var actualSolutionName = Path.GetFileName(dteSolutionFullName);
-
-            //return Path.GetFileName(dteSolutionFullName).ToLower() == rulesDto.SolutionName.ToLower();
-        //}
 
         private GeneralOptionsDto GetGeneralOptionsDtoFromStorage()
         {
@@ -352,102 +334,3 @@ namespace AutoFindReplace
         }
     }
 }
-
-
-
-#region gregt to be deleted
-
-//string projectsDetail = string.Empty;
-//Projects projects = dte.Solution.Projects;
-//foreach (Project project in projects)
-//{
-//    projectsDetail += "UniqueName=" + project.UniqueName + " Kind=" + project.Kind + Environment.NewLine;
-//}
-//UniqueName = a\a.csproj                                        Kind = { FAE04EC0 - 301F - 11D3 - BF4B - 00C04F79EFBC }
-//UniqueName =..\b\b.csproj                                      Kind = { FAE04EC0 - 301F - 11D3 - BF4B - 00C04F79EFBC }
-//UniqueName = f1{ 77DD4D22 - 73B3 - 4EB2 - 8F1C - 07F4E96A46F8} Kind = { 66A26720 - 8FB5 - 11D2 - AA7E - 00C04F688DDE }
-//NAME: Solution Items{ 5B9E7010 - 9C34 - 4FA3 - AED6 - AD26E2C6C9CB}
-//NAME: SiDem2.ClientWrappers{ FC3FBD6D - 58EB - 42EF - 90E4 - 6FFBC33C18FC}
-//NAME: SiDem2.BL{ 89F6A61A - 834C - 42D2 - 85D3 - 6756AAE294D1}
-//NAME: SiDem2.Levi9.PL{ 39EADEC9 - F559 - 49E0 - BB81 - BE1E68965593}
-//NAME: SiDem2.PL{ 6DC4E2EA - F5F6 - 4296 - B7F8 - BD23886BCC5C}
-//NAME: Externals{ FC6F4743 - E078 - 4071 - 859A - 75C5307DD0BB}
-//NAME: Broker{ E239A8BE - 3A0D - 4723 - A559 - 03D28B3A766B}
-
-
-
-
-//var sol = dte.Solution;
-//var projs = sol.Projects;
-////////DTE2 dte2 = Package.GetGlobalService(typeof(DTE)) as DTE2;
-////////var sol = dte2.Solution;
-////////var projs = sol.Projects;
-//foreach (var proj in sol)
-//{
-//    var fullName = string.Empty;
-//    var project = proj as Project;
-//    if (project.Kind == ProjectKinds.vsProjectKindSolutionFolder)
-//    {
-//        var innerProjects = GetSolutionFolderProjects(project);
-//        foreach (var innerProject in innerProjects)
-//        {
-//            //carry out actions here.
-//        }
-//    }
-//    if (!string.IsNullOrEmpty(fullName))
-//    {
-//        fullNames.Add(fullName);
-//    }
-//}
-
-
-
-//private IEnumerable<Project> GetSolutionFolderProjects(Project project)
-//{
-//    List<Project> projects = new List<Project>();
-//    var y = (project.ProjectItems as ProjectItems).Count;
-//    for (var i = 1; i <= y; i++)
-//    {
-//        var x2 = project.ProjectItems.Item(i);
-//        if (project.Kind == ProjectKinds.vsProjectKindSolutionFolder)
-//        {
-//            //???
-//            var innerProjects2  = GetSolutionFolderProjects2(project);
-//        }
-//        else
-//        {
-//            var x = x2.SubProject;
-//            var subProject = x as Project;
-//            if (subProject != null)
-//            {
-//                var projectPath = Path.GetDirectoryName(x.FullName);
-//                var projectName = x.FullName.TrimPrefix(projectPath).TrimPrefix(@"\");
-//                projectPaths.Add(projectName, projectPath);
-//            }
-//        }
-//    }
-//    return projects;
-//}
-
-//private IEnumerable<Project> GetSolutionFolderProjects2(Project project)
-//{
-//    List<Project> projects = new List<Project>();
-//    var y = (project.ProjectItems as ProjectItems).Count;
-//    for (var i = 1; i <= y; i++)
-//    {
-//        var x2 = project.ProjectItems.Item(i);
-//        if (project.Kind != ProjectKinds.vsProjectKindSolutionFolder)
-//        {
-//            var x = x2.SubProject;
-//            var subProject = x as Project;
-//            if (subProject != null)
-//            {
-//                var projectPath = Path.GetDirectoryName(x.FullName);
-//                var projectName = x.FullName.TrimPrefix(projectPath).TrimPrefix(@"\");
-//                projectPaths.Add(projectName, projectPath);
-//            }
-//        }
-//    }
-//    return projects;
-//}
-#endregion
