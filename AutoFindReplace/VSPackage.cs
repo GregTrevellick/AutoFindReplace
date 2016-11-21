@@ -81,36 +81,27 @@ namespace AutoFindReplace
         private IEnumerable<string> ApplyChangesToSourceCode(IEnumerable<RulesDto> rulesDtos, GeneralOptionsDto generalOptionsDto, string dteSolutionFullName)
         {
             var applyChangesMessages = new List<string>();
+            var dteSolutionName = Path.GetFileName(dteSolutionFullName).ToLower();
 
-            foreach (var rulesDto in rulesDtos.Where(x => x.Enabled))
+            foreach (var rulesDto in rulesDtos.Where(x => x.Enabled && x.SolutionName.ToLower() == dteSolutionName))
             {
                 try
                 {
-                    var haveWeOpenedTheCorrectSolution = HaveWeOpenedTheCorrectSolution(rulesDto, dteSolutionFullName);
-
-                    if (haveWeOpenedTheCorrectSolution)
-                    {
-                        projectPaths = new Dictionary<string, string>();
-
-
-                        SetProjectPaths();
-                                //key=""
-                                //value="C:\Users\greg\Desktop\SMD_116-031_00376_BugFixes_CutDown\SMD_116-031_00376_BugFixes_CutDown\ClientWrappers\Sis.SiDem2.IbmIoc\Sis.SiDem2.IbmIoc.PL\Sis.SiDem2.IbmIoc.PL.csproj"
+                    projectPaths = new Dictionary<string, string>();
+                    SetProjectPaths();
     
+                    anyRulesProcessed = true;
+                    rulesEnabledForThisSolutionCount++;
 
-                        anyRulesProcessed = true;
-                        rulesEnabledForThisSolutionCount++;
+                    var targetFileFullPath = GetTargetFileFullPath(rulesDto, generalOptionsDto);
 
-                        var targetFileFullPath = GetTargetFileFullPath(rulesDto, generalOptionsDto);
-
-                        if (!string.IsNullOrEmpty(targetFileFullPath))
-                        {
-                            var findReplaceMessages = PerformFindReplace(rulesDto, generalOptionsDto, targetFileFullPath);
-                            applyChangesMessages.AddRange(findReplaceMessages);
-                        }
-
-                        rulesProcesssedSuccessfullyCount++;
+                    if (!string.IsNullOrEmpty(targetFileFullPath))
+                    {
+                        var findReplaceMessages = PerformFindReplace(rulesDto, generalOptionsDto, targetFileFullPath);
+                        applyChangesMessages.AddRange(findReplaceMessages);
                     }
+
+                    rulesProcesssedSuccessfullyCount++;
                 }
                 catch (Exception ex)
                 {
@@ -142,22 +133,21 @@ namespace AutoFindReplace
                             var subProject = x as Project;
                             if (subProject != null)
                             {
-                                NewMethodGregt(x);
+                                SetProjectPaths(x);
                             }
                         }
                     }
                     else
                     {
                         // We've encountered a project
-                        NewMethodGregt(project);
+                        SetProjectPaths(project);
                     }
                 }
             }
         }
 
-        private void NewMethodGregt(Project project)
+        private void SetProjectPaths(Project project)
         {
-            //var projectName = project.FullName.TrimPrefix(project.FullName).TrimPrefix(@"\");
             var projectName = Path.GetFileName(project.FullName);
             var projectPath = Path.GetDirectoryName(project.FullName);
 
@@ -273,13 +263,14 @@ namespace AutoFindReplace
             return fileIsEligibleToBeChanged;
         }
 
-        private bool HaveWeOpenedTheCorrectSolution(RulesDto rulesDto, string dteSolutionFullName)
-        {
-            var actualSolutionPathArray = dteSolutionFullName.Split('\\');
-            var actualSolutionName = actualSolutionPathArray.Last();
+        //private bool HaveWeOpenedTheCorrectSolution(RulesDto rulesDto, string dteSolutionFullName)
+        //{
+            //var actualSolutionPathArray = dteSolutionFullName.Split('\\');
+            //var actualSolutionName = actualSolutionPathArray.Last();
+            //var actualSolutionName = Path.GetFileName(dteSolutionFullName);
 
-            return actualSolutionName.ToLower() == rulesDto.SolutionName.ToLower();
-        }
+            //return Path.GetFileName(dteSolutionFullName).ToLower() == rulesDto.SolutionName.ToLower();
+        //}
 
         private GeneralOptionsDto GetGeneralOptionsDtoFromStorage()
         {
