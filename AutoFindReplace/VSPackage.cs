@@ -82,14 +82,13 @@ namespace AutoFindReplace
         {
             var applyChangesMessages = new List<string>();
             var dteSolutionName = Path.GetFileName(dteSolutionFullName).ToLower();
+            projectPaths = new Dictionary<string, string>();
 
             foreach (var rulesDto in rulesDtos.Where(x => x.Enabled && x.SolutionName.ToLower() == dteSolutionName))
             {
                 try
                 {
-                    projectPaths = new Dictionary<string, string>();
                     SetProjectPaths();
-    
                     anyRulesProcessed = true;
                     rulesEnabledForThisSolutionCount++;
 
@@ -116,31 +115,34 @@ namespace AutoFindReplace
 
         private void SetProjectPaths()
         {
-            Projects projects = dte.Solution.Projects;
-
-            foreach (Project project in projects)
+            if (projectPaths.Count == 0)
             {
-                if (project.Kind != solutionItemsFolder)
+                Projects projects = dte.Solution.Projects;
+
+                foreach (Project project in projects)
                 {
-                    if (project.Kind == ProjectKinds.vsProjectKindSolutionFolder)
+                    if (project.Kind != solutionItemsFolder)
                     {
-                        // We've encountered a folder
-                        var y = (project.ProjectItems as ProjectItems).Count;
-                        for (var i = 1; i <= y; i++)
+                        if (project.Kind == ProjectKinds.vsProjectKindSolutionFolder)
                         {
-                            var x2 = project.ProjectItems.Item(i);
-                            var x = x2.SubProject;
-                            var subProject = x as Project;
-                            if (subProject != null)
+                            // We've encountered a folder
+                            var y = (project.ProjectItems as ProjectItems).Count;
+                            for (var i = 1; i <= y; i++)
                             {
-                                SetProjectPaths(x);
+                                var x2 = project.ProjectItems.Item(i);
+                                var x = x2.SubProject;
+                                var subProject = x as Project;
+                                if (subProject != null)
+                                {
+                                    SetProjectPaths(x);
+                                }
                             }
                         }
-                    }
-                    else
-                    {
-                        // We've encountered a project
-                        SetProjectPaths(project);
+                        else
+                        {
+                            // We've encountered a project
+                            SetProjectPaths(project);
+                        }
                     }
                 }
             }
