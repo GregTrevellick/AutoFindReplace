@@ -157,8 +157,9 @@ namespace AutoFindReplace
 
         private void NewMethodGregt(Project project)
         {
-            var projectName = project.FullName.TrimPrefix(project.FullName).TrimPrefix(@"\");
-            var projectPath = project.FullName.TrimSuffix(projectName);
+            //var projectName = project.FullName.TrimPrefix(project.FullName).TrimPrefix(@"\");
+            var projectName = Path.GetFileName(project.FullName);
+            var projectPath = Path.GetDirectoryName(project.FullName);
 
             if (!projectPaths.ContainsKey(projectName))
             {
