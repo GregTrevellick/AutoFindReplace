@@ -56,6 +56,8 @@ on the official Visual Studio extension gallery.
 - [x] Bug fix
   - [x] GitHub issue [#2](https://github.com/GregTrevellick/AutoFindReplace/issues/2) - Complex folder structures result in error "Path is not a legal form"
 
+<!--update vs gallry links to vs market place-->
+
 <!--travis //travis-ci.org/getting_started //docs.travis-ci.com/user/languages/csharp/ //github.com/mwrock/PowerShell/blob/master/.travis.yml-->
 
 <!--sign the extension - not required for auto updates ! activity log ? github.com/mwrock/PowerShell/tree/master/src/signing-->
