@@ -27,6 +27,7 @@ namespace AutoFindReplace
         private int changesCount;
         private DTE dte;
         private IList<string> failureMessages;
+        private bool matchingSolutionOpened;
         private Dictionary<string, string> projectPaths;
         private int rulesEnabledForThisSolutionCount;
         private int rulesProcesssedSuccessfullyCount;
@@ -54,6 +55,7 @@ namespace AutoFindReplace
             failureMessages = new List<string>();
             IList<string> successMessages = new List<string>();
             IEnumerable<string> summaryMessages = new List<string>();
+            matchingSolutionOpened = false;
 
             var generalOptionsDto = GetGeneralOptionsDtoFromStorage();
             var rulesDtos = RulesHelper.GetRulesDtos();
@@ -66,7 +68,7 @@ namespace AutoFindReplace
                     successMessages.Add(applyChangesMessage);
                 }
 
-                if (anyRulesProcessed || failureMessages.Count > 0)
+                if (matchingSolutionOpened && (anyRulesProcessed || failureMessages.Count > 0))
                 {
                     summaryMessages = messagesHelper.GetSummaryMessages(rulesEnabledForThisSolutionCount, rulesProcesssedSuccessfullyCount, rulesProcesssedUnsuccessfullyCount, changesCount);
                     var userFriendlySuccessMessages = messagesHelper.GetUserFriendlySuccessMessages(successMessages);
@@ -86,6 +88,8 @@ namespace AutoFindReplace
 
             foreach (var rulesDto in rulesDtos.Where(x => x.Enabled && x.SolutionName.ToLower() == dteSolutionName))
             {
+                matchingSolutionOpened = true;
+
                 try
                 {
                     SetProjectPaths();

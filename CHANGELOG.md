@@ -55,15 +55,19 @@ on the official Visual Studio extension gallery.
 
 - [x] Bug fix
   - [x] GitHub issue [#2](https://github.com/GregTrevellick/AutoFindReplace/issues/2) - Complex folder structures result in error "Path is not a legal form"
-  - [x] GitHub issue [#3](https://github.com/GregTrevellick/AutoFindReplace/issues/3) - Modifications being applied to open docs
+  - [ ] GitHub issue [#3](https://github.com/GregTrevellick/AutoFindReplace/issues/3) - Modifications being applied to open docs
+  - [ ] GitHub issue [#4](https://github.com/GregTrevellick/AutoFindReplace/issues/4) - Rules kick-in when opening a file, not just when opening solution
 
 <!--update vs gallry links to vs market place-->
+<!--old = https://visualstudiogallery.msdn.microsoft.com/02a85115-e23c-4e73-af09-957741c4f57d?redir=0-->
+<!--new = https://marketplace.visualstudio.com/items?itemName=GregTrevellick.AutoFindReplace-->
 
 <!--travis //travis-ci.org/getting_started //docs.travis-ci.com/user/languages/csharp/ //github.com/mwrock/PowerShell/blob/master/.travis.yml-->
 
 <!--sign the extension - not required for auto updates ! activity log ? github.com/mwrock/PowerShell/tree/master/src/signing-->
 
 <!--rules kick in when opening a file not just a sln-->
+
 <!--rules kick in when creating a sln-->
 <!--auto column widths-->
 <!--commas in csv-->
