@@ -55,8 +55,8 @@ on the official Visual Studio extension gallery.
 
 - [x] Bug fix
   - [x] GitHub issue [#2](https://github.com/GregTrevellick/AutoFindReplace/issues/2) - Complex folder structures result in error "Path is not a legal form"
-  - [ ] GitHub issue [#3](https://github.com/GregTrevellick/AutoFindReplace/issues/3) - Modifications being applied to open docs
-  - [ ] GitHub issue [#4](https://github.com/GregTrevellick/AutoFindReplace/issues/4) - Rules kick-in when opening a file, not just when opening solution
+  - [x] GitHub issue [#3](https://github.com/GregTrevellick/AutoFindReplace/issues/3) - Modifications being applied to open docs
+  - [x] GitHub issue [#4](https://github.com/GregTrevellick/AutoFindReplace/issues/4) - Rules kick-in when opening a file, not just when opening solution
 
 <!--update vs gallry links to vs market place-->
 <!--old = https://visualstudiogallery.msdn.microsoft.com/02a85115-e23c-4e73-af09-957741c4f57d?redir=0-->
@@ -66,11 +66,14 @@ on the official Visual Studio extension gallery.
 
 <!--sign the extension - not required for auto updates ! activity log ? github.com/mwrock/PowerShell/tree/master/src/signing-->
 
-<!--rules kick in when opening a file not just a sln-->
-
 <!--rules kick in when creating a sln-->
 <!--auto column widths-->
 <!--commas in csv-->
 <!--suppress pop up if nowt changed-->
 <!--"a" -> ""-->
 <!--"a" -> "a"-->
+   <!--Add a count of diabled rules to the Results dialog-->
+   <!--Mark new rules as Enabled by default-->
+   <!--Display warning if user chooses to allow modifications to files not under source-control-->
+   <!--Add an option to allow user to supprerss the Results dialog if no modifications were made-->
+   <!--Allow sorting of Rules-->
