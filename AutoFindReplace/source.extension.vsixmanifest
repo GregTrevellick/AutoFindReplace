@@ -5,7 +5,7 @@
     <DisplayName>AutoFindReplace</DisplayName>
     <Description xml:space="preserve">Automatically perform a find/replace action on individual file(s) within a specified project(s) upon opening a named solution. </Description>
     <MoreInfo>https://github.com/GregTrevellick/AutoFindReplace</MoreInfo>
-    <License>LICENSE.txt</License>
+    <License>LICENSE</License>
     <ReleaseNotes>https://github.com/GregTrevellick/AutoFindReplace/blob/master/CHANGELOG.md</ReleaseNotes>
     <Icon>Resources\ExtensionIcon_32x32.png</Icon>
     <PreviewImage>Resources\ExtensionPreview_175x175.png</PreviewImage>

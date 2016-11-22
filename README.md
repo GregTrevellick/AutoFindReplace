@@ -96,7 +96,7 @@ Additionally the rules specified in the example screen shots above can be implem
 For cloning and building this project yourself, make sure to install the [Extensibility Tools 2015](https://visualstudiogallery.msdn.microsoft.com/ab39a092-1343-46e2-b0f1-6a3f91155aa6) extension for Visual Studio which enables some features used by this project.
 
 ## License
-[MIT](/AutoFindReplace/LICENSE.txt)
+[MIT](/AutoFindReplace/LICENSE)
 
 ## Credits
 
