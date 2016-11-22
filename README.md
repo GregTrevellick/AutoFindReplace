@@ -102,8 +102,6 @@ For cloning and building this project yourself, make sure to install the [Extens
 
 The following authors / articles deserve special mention for their help whilst creating this extension:
 
-[Sho Sato](https://vsmarketplacebadge.apphb.com/)
-
 [Mads Kristensen](https://channel9.msdn.com/Events/Build/2016/B886)
 
 [Joshua Thompson](http://schmalls.com/2015/01/19/adventures-in-visual-studio-extension-development-part-2)
@@ -113,3 +111,5 @@ The following authors / articles deserve special mention for their help whilst c
 [Paul Betts](https://github.com/paulcbetts/SaveAllTheTime)
 
 [Daniel Schroeder](http://blog.danskingdom.com/category/visual-studio-extensions/)
+
+[Sho Sato](https://vsmarketplacebadge.apphb.com/)

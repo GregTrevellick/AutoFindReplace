@@ -51,23 +51,19 @@ on the official Visual Studio extension gallery.
 - [x] Bug fix
   - [x] GitHub issue [#1](https://github.com/GregTrevellick/AutoFindReplace/issues/1) - Files not auto changed when outside the root of the solution file
 
+## Coming soon...
 
+- [x] Bug fix
+  - [x] GitHub issue [#2](https://github.com/GregTrevellick/AutoFindReplace/issues/2) - Complex folder structures result in error "Path is not a legal form"
 
-<!--ADD A CREDIT TO & VOTE UP & RETWEET http://stackoverflow.com/questions/38740773/how-to-get-project-inside-of-solution-folder-in-vsix-project-->
-
-<!--move license up a level like filesforeverysuffix-->
-<!--guthub/linguist-->
-<!--eliminate build warnings-->
-<!--codeship-->
-<!--team city-->
-<!--tfs-->
-<!--jenkins-->
 <!--travis //travis-ci.org/getting_started //docs.travis-ci.com/user/languages/csharp/ //github.com/mwrock/PowerShell/blob/master/.travis.yml-->
-<!--https://github.com/integrations/sonarqube-->
-<!--https://github.com/integrations/codacy-->
-<!--https://github.com/integrations/code-climate-->
+
 <!--sign the extension - not required for auto updates ! activity log ? github.com/mwrock/PowerShell/tree/master/src/signing-->
+
 <!--rules kick in when opening a file not just a sln-->
 <!--rules kick in when creating a sln-->
 <!--auto column widths-->
 <!--commas in csv-->
+<!--suppress pop up if nowt changed-->
+<!--"a" -> ""-->
+<!--"a" -> "a"-->
