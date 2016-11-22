@@ -152,7 +152,7 @@ namespace AutoFindReplace.Helpers
             {
                 FindWhat = "copyright 2015",
                 ReplaceWith = "Copyright 2016",
-                FileName = "Licence.txt",
+                FileName = "License.txt",
                 ProjectName = "any1.csproj",
                 SolutionName = "any.sln",
                 Enabled = true,
@@ -164,7 +164,7 @@ namespace AutoFindReplace.Helpers
             {
                 FindWhat = "cOpYrIgHt 2015",
                 ReplaceWith = "Copyright 2016",
-                FileName = "LiCeNcE.tXt",
+                FileName = "LiCeNsE.tXt",
                 ProjectName = "aNy2.vBpRoJ",
                 SolutionName = "aNy.sLn",
                 Enabled = true,

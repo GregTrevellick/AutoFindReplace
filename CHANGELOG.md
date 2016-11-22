@@ -55,7 +55,7 @@ on the official Visual Studio extension gallery.
 
 <!--ADD A CREDIT TO & VOTE UP & RETWEET http://stackoverflow.com/questions/38740773/how-to-get-project-inside-of-solution-folder-in-vsix-project-->
 
-<!--move licence.txt up a level like filesforeverysuffix-->
+<!--move license.txt up a level like filesforeverysuffix-->
 <!--guthub/linguist-->
 <!--eliminate build warnings-->
 <!--codeship-->
