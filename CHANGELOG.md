@@ -55,6 +55,7 @@ on the official Visual Studio extension gallery.
 
 - [x] Bug fix
   - [x] GitHub issue [#2](https://github.com/GregTrevellick/AutoFindReplace/issues/2) - Complex folder structures result in error "Path is not a legal form"
+  - [x] GitHub issue [#3](https://github.com/GregTrevellick/AutoFindReplace/issues/3) - Modifications being applied to open docs
 
 <!--update vs gallry links to vs market place-->
 

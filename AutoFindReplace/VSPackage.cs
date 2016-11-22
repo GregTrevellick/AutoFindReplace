@@ -296,7 +296,7 @@ namespace AutoFindReplace
                     vsFindOptions = vsFindOptions.vsFindOptionsFromStart;
                 }
 
-                var result = find.FindReplace(vsFindAction.vsFindActionReplaceAll, rulesDto.FindWhat, (int)vsFindOptions, rulesDto.ReplaceWith, vsFindTarget.vsFindTargetOpenDocuments);
+                var result = find.FindReplace(vsFindAction.vsFindActionReplaceAll, rulesDto.FindWhat, (int)vsFindOptions, rulesDto.ReplaceWith, vsFindTarget.vsFindTargetCurrentDocument);
 
                 if (result == vsFindResult.vsFindResultReplaced)
                 {
