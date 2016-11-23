@@ -154,12 +154,15 @@ namespace AutoFindReplace
 
         private void SetProjectPaths(Project project)
         {
-            var projectName = Path.GetFileName(project.FullName);
-            var projectPath = Path.GetDirectoryName(project.FullName);
-
-            if (!projectPaths.ContainsKey(projectName))
+            if (!string.IsNullOrEmpty(project.FullName))
             {
-                projectPaths.Add(projectName, projectPath);
+                var projectName = Path.GetFileName(project.FullName);
+                var projectPath = Path.GetDirectoryName(project.FullName);
+
+                if (!projectPaths.ContainsKey(projectName))
+                {
+                    projectPaths.Add(projectName, projectPath);
+                }
             }
         }
 
