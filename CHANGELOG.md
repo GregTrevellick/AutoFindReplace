@@ -51,9 +51,11 @@ on the official Visual Studio extension gallery.
 - [x] Bug fix
   - [x] GitHub issue [#1](https://github.com/GregTrevellick/AutoFindReplace/issues/1) - Files not auto changed when outside the root of the solution file
 
-## Coming soon...
+## 1.2.64
 
-- [x] Bug fix
+**2016-11-24** <!--07:15 UK / 07:15 UTC-->
+
+- [x] Bug fixes
   - [x] GitHub issue [#2](https://github.com/GregTrevellick/AutoFindReplace/issues/2) - Complex folder structures result in error "Path is not a legal form"
   - [x] GitHub issue [#3](https://github.com/GregTrevellick/AutoFindReplace/issues/3) - Modifications being applied to open docs
   - [x] GitHub issue [#4](https://github.com/GregTrevellick/AutoFindReplace/issues/4) - Rules kick-in when opening a file, not just when opening solution
