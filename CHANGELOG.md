@@ -4,7 +4,7 @@
    - [ ] Add a count of diabled rules to the Results dialog
    - [ ] Mark new rules as Enabled by default
    - [ ] Display warning if user chooses to allow modifications to files not under source-control
-   - [ ] Add an option to allow user to supprerss the Results dialog if no modifications were made
+   - [ ] Add an option to allow user to suppress the Results dialog if no modifications were made
    - [ ] Allow sorting of Rules
 
 - [ ] Support for additional VS versions
@@ -84,6 +84,5 @@ on the official Visual Studio extension gallery.
 <!--update vs gallry links to vs market place
 -old = https://visualstudiogallery.msdn.microsoft.com/02a85115-e23c-4e73-af09-957741c4f57d?redir=0
 new = https://marketplace.visualstudio.com/items?itemName=GregTrevellick.AutoFindReplace-->
-<!--travis //travis-ci.org/getting_started //docs.travis-ci.com/user/languages/csharp/ //github.com/mwrock/PowerShell/blob/master/.travis.yml-->
 <!--sign the extension - not required for auto updates ! activity log ? github.com/mwrock/PowerShell/tree/master/src/signing-->
 <!--auto column widths-->
