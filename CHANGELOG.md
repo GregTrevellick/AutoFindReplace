@@ -60,7 +60,11 @@ on the official Visual Studio extension gallery.
   - [x] GitHub issue [#3](https://github.com/GregTrevellick/AutoFindReplace/issues/3) - Modifications being applied to open docs
   - [x] GitHub issue [#4](https://github.com/GregTrevellick/AutoFindReplace/issues/4) - Rules kick-in when opening a file, not just when opening solution
 
+## 1.2.68
 
+**2016-12-05** <!--08:35 UK / 08:35 UTC-->
+
+- [x] Updates for VS Marketplace
 
 
 <!--MUST / QUICK WINS-->
@@ -81,9 +85,5 @@ on the official Visual Studio extension gallery.
 <!--Publish the extension for VS2017-->
 
 <!--HARD / LOW PTY-->
-<!--update vs gallry links to vs market place
--old = https://visualstudiogallery.msdn.microsoft.com/02a85115-e23c-4e73-af09-957741c4f57d?redir=0
-new = https://marketplace.visualstudio.com/items?itemName=GregTrevellick.AutoFindReplace-->
-<!--travis //travis-ci.org/getting_started //docs.travis-ci.com/user/languages/csharp/ //github.com/mwrock/PowerShell/blob/master/.travis.yml-->
 <!--sign the extension - not required for auto updates ! activity log ? github.com/mwrock/PowerShell/tree/master/src/signing-->
 <!--auto column widths-->
