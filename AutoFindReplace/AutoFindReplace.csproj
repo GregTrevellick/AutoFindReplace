@@ -102,7 +102,10 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Resources\ExtensionPreview_90x90.png" />
+    <Content Include="Resources\ExtensionIcon_90x90.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
     <Content Include="Resources\ScreenShot_General.png" />
     <Content Include="Resources\ScreenShot_ResultsWindow.png" />
     <Content Include="Resources\ScreenShot_Rules.png" />
