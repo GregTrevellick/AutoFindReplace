@@ -6,7 +6,7 @@
 <!--![](https://vsmarketplacebadge.apphb.com/installs/GregTrevellick.AutoFindReplace.svg)-->
 <!--![](https://vsmarketplacebadge.apphb.com/rating/GregTrevellick.AutoFindReplace.svg)-->
 
-Download this extension from the [VS Gallery](https://visualstudiogallery.msdn.microsoft.com/02a85115-e23c-4e73-af09-957741c4f57d).
+Download this extension from the [VS Marketplace](https://marketplace.visualstudio.com/items?itemName=GregTrevellick.AutoFindReplace).
 
 ---------------------------------------
 
@@ -18,7 +18,7 @@ The intention is to eliminate repetitive manual code modifications that a develo
 
 With this extension installed Visual Studio will automatically perform a find/replace action on specified file(s) within a specified project upon opening a named solution.
 
-If you like this *free* extension, please give it a [review](https://visualstudiogallery.msdn.microsoft.com/02a85115-e23c-4e73-af09-957741c4f57d).
+If you like this *free* extension, please give it a [review](https://marketplace.visualstudio.com/items?itemName=GregTrevellick.AutoFindReplace#review-details).
 
 See the [change log](CHANGELOG.md) for road map and release history.
 
@@ -60,7 +60,7 @@ Any developer using the Visual Studio IDE (any language, any file type) who curr
 
  - You have a Master Page, and every time you open a new branch of your solution you manually and repeatedly change the page header to contain a phrase such as "Local Work-In-Progress" to aid user interpretation of any screen shots you produce.
   
- - Many more. *If you have a use-case you would like listed here, just let me know via a review on the [VS Gallery](https://visualstudiogallery.msdn.microsoft.com/02a85115-e23c-4e73-af09-957741c4f57d) or by raising an [Issue](https://github.com/GregTrevellick/AutoFindReplace/issues) or submitting a [Pull Request](https://github.com/GregTrevellick/AutoFindReplace/pulls).*
+ - Many more. *If you have a use-case you would like listed here, just let me know via a review on the [VS Gallery](https://marketplace.visualstudio.com/items?itemName=GregTrevellick.AutoFindReplace#review-details).*
  
 ## Features
 
@@ -87,13 +87,11 @@ Any developer using the Visual Studio IDE (any language, any file type) who curr
 <!--COPY END FOR VS GALLERY-->
 
 ## Contribute
-Contributions to this project are welcome.
+Contributions to this project are welcome by raising an [Issue](https://github.com/GregTrevellick/AutoFindReplace/issues) or submitting a [Pull Request](https://github.com/GregTrevellick/AutoFindReplace/pulls).
 
-To that end a zip file containing the sample JoePublic.Sln file has been made available [here](https://github.com/GregTrevellick/AutoFindReplace/blob/master/JoePublic.zip).
+A zip file containing the sample JoePublic.Sln (used for sample screen shots) has been made available [here](https://github.com/GregTrevellick/AutoFindReplace/blob/master/JoePublic.zip).
 
-Additionally the rules specified in the example screen shots above can be implemented locally by setting the 'applyTestRules' property of [RulesHelper.cs](https://github.com/GregTrevellick/AutoFindReplace/blob/master/AutoFindReplace/Helpers/RulesHelper.cs) to 'true'.
-
-For cloning and building this project yourself, make sure to install the [Extensibility Tools 2015](https://visualstudiogallery.msdn.microsoft.com/ab39a092-1343-46e2-b0f1-6a3f91155aa6) extension for Visual Studio which enables some features used by this project.
+The rules specified in the example screen shots above can be implemented locally by setting the 'applyTestRules' property of [RulesHelper.cs](https://github.com/GregTrevellick/AutoFindReplace/blob/master/AutoFindReplace/Helpers/RulesHelper.cs) to 'true'.
 
 ## License
 [MIT](/LICENSE.txt)
