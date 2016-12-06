@@ -1,18 +1,9 @@
 # Road Map
 
-- [ ] Improvements
-   - [ ] Add a count of diabled rules to the Results dialog
-   - [ ] Mark new rules as Enabled by default
-   - [ ] Display warning if user chooses to allow modifications to files not under source-control
-   - [ ] Add an option to allow user to suppress the Results dialog if no modifications were made
-   - [ ] Allow sorting of Rules
-
 - [ ] Support for additional VS versions
    - [ ] Publish the extension for VS2005 
    - [ ] Publish the extension for VS2008 
    - [ ] Publish the extension for VS2010 
-
-- [ ] Convert codebase to .Net Core
 
 # Change log
 
@@ -76,7 +67,6 @@ on the official Visual Studio extension gallery.
 
 <!--MUST / QUICK WINS-->
 <!--suppress pop up if nowt changed-->
-<!--allow sorting of Rules-->
 <!--auto column widths-->
 
 <!--MEDIUM-->
@@ -84,4 +74,4 @@ on the official Visual Studio extension gallery.
 <!--Publish the extension for VS2010 -->
 <!--Publish the extension for VS2005/2008-->
 <!--sign the extension - not required for auto updates ! activity log ? github.com/mwrock/PowerShell/tree/master/src/signing-->
-
+<!--allow sorting of rules-->
