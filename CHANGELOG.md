@@ -61,13 +61,12 @@ on the official Visual Studio extension gallery.
 **2016-12-xx** <!--hh:mm UK / hh:mm UTC-->
 
 - [x] Publish the extension for VS2017
-
+- [x] Auto-size the column widths for Rules in Options
 
 
 
 <!--MUST / QUICK WINS-->
 <!--suppress pop up if nowt changed-->
-<!--auto column widths-->
 
 <!--MEDIUM-->
 <!--Add a count of diabled rules to the Results dialog-->

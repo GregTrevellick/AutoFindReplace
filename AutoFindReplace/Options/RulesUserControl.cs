@@ -71,6 +71,7 @@ namespace AutoFindReplace.Options
                 case "text":
                     return new DataGridViewTextBoxColumn
                     {
+                        AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells,
                         DataPropertyName = name,
                         DisplayIndex = displayIndex,
                         HeaderText = headerText,
@@ -84,6 +85,7 @@ namespace AutoFindReplace.Options
                 case "checkBox":
                     return new DataGridViewCheckBoxColumn
                     {
+                        AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells,
                         DataPropertyName = name,
                         DisplayIndex = displayIndex,
                         HeaderText = headerText,
