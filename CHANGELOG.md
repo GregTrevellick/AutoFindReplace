@@ -62,11 +62,11 @@ on the official Visual Studio extension gallery.
 
 - [x] Publish the extension for VS2017
 - [x] Auto-size the column widths for Rules in Options
+- [x] Added option to suppress results dialog if no modifications applied 
 
 
 
-<!--MUST / QUICK WINS-->
-<!--suppress pop up if nowt changed-->
+
 
 <!--MEDIUM-->
 <!--Add a count of diabled rules to the Results dialog-->
