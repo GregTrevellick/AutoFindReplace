@@ -11,7 +11,6 @@
    - [ ] Publish the extension for VS2005 
    - [ ] Publish the extension for VS2008 
    - [ ] Publish the extension for VS2010 
-   - [ ] Publish the extension for VS2017
 
 - [ ] Convert codebase to .Net Core
 
@@ -62,28 +61,29 @@ on the official Visual Studio extension gallery.
 
 ## 1.2.68
 
-**2016-12-05** <!--08:35 UK / 08:35 UTC-->
+**2016-12-05** <!--18:30 UK / 18:30 UTC-->
 
 - [x] Updates for VS Marketplace
 
+## 1.2.xx
+
+**2016-12-xx** <!--hh:mm UK / hh:mm UTC-->
+
+- [x] Publish the extension for VS2017
+
+
+
 
 <!--MUST / QUICK WINS-->
-<!--rules kick in when creating a sln-->
-<!--commas in csv-->
 <!--suppress pop up if nowt changed-->
-<!--"a" -> ""-->
-<!--"a" -> "a"-->
-<!--Add a count of diabled rules to the Results dialog-->
-<!--Mark new rules as Enabled by default-->
-<!--Add an option to allow user to suppress the Results dialog if no modifications were made-->
-<!--Publish the extension for VS2010 -->
+<!--allow sorting of Rules-->
+<!--mark new rules as Enabled by default-->
+<!--warning if user chooses to allow modifications to files not under source-control-->
+<!--auto column widths-->
 
 <!--MEDIUM-->
-<!--Display warning if user chooses to allow modifications to files not under source-control-->
-<!--Allow sorting of Rules-->
+<!--Add a count of diabled rules to the Results dialog-->
+<!--Publish the extension for VS2010 -->
 <!--Publish the extension for VS2005/2008-->
-<!--Publish the extension for VS2017-->
-
-<!--HARD / LOW PTY-->
 <!--sign the extension - not required for auto updates ! activity log ? github.com/mwrock/PowerShell/tree/master/src/signing-->
-<!--auto column widths-->
+
