@@ -77,8 +77,6 @@ on the official Visual Studio extension gallery.
 <!--MUST / QUICK WINS-->
 <!--suppress pop up if nowt changed-->
 <!--allow sorting of Rules-->
-<!--mark new rules as Enabled by default-->
-<!--warning if user chooses to allow modifications to files not under source-control-->
 <!--auto column widths-->
 
 <!--MEDIUM-->
