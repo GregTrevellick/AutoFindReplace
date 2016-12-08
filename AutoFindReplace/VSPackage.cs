@@ -68,25 +68,7 @@ namespace AutoFindReplace
                     successMessages.Add(applyChangesMessage);
                 }
 
-
-
-
-                //gregt test this
-                var showPopUpMessage = false;
-                if (matchingSolutionOpened && (anyRulesProcessed || failureMessages.Count > 0))
-                {
-                    showPopUpMessage = true;
-
-                    if (generalOptionsDto.HideResultsDialogIfNoModifications && changesCount == 0)
-                    {
-                        showPopUpMessage = false;
-                    }
-                }
-
-
-
-
-
+                bool showPopUpMessage = ShowPopUpMessage(generalOptionsDto);
                 if (showPopUpMessage)
                 {
                     summaryMessages = messagesHelper.GetSummaryMessages(rulesEnabledForThisSolutionCount, rulesProcesssedSuccessfullyCount, rulesProcesssedUnsuccessfullyCount, changesCount);
@@ -97,6 +79,23 @@ namespace AutoFindReplace
             }
 
             PostOpenProcessing();
+        }
+
+        private bool ShowPopUpMessage(GeneralOptionsDto generalOptionsDto)
+        {
+            var showPopUpMessage = false;
+
+            if (matchingSolutionOpened && (anyRulesProcessed || failureMessages.Count > 0))
+            {
+                showPopUpMessage = true;
+
+                if (generalOptionsDto.HideResultsDialogIfNoModifications && changesCount == 0)
+                {
+                    showPopUpMessage = false;
+                }
+            }
+
+            return showPopUpMessage;
         }
 
         private IEnumerable<string> ApplyChangesToSourceCode(IEnumerable<RulesDto> rulesDtos, GeneralOptionsDto generalOptionsDto, string dteSolutionFullName)
