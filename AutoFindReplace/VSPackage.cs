@@ -68,11 +68,10 @@ namespace AutoFindReplace
                     successMessages.Add(applyChangesMessage);
                 }
 
+
+
+
                 //gregt test this
-                //add to readme.md "features"
-  //              - [x] Publish the extension for VS2017
-//- [x] Auto - size the column widths for Rules in Options
-  //- [x] Added option to suppress results dialog if no modifications applied
                 var showPopUpMessage = false;
                 if (matchingSolutionOpened && (anyRulesProcessed || failureMessages.Count > 0))
                 {
@@ -83,6 +82,9 @@ namespace AutoFindReplace
                         showPopUpMessage = false;
                     }
                 }
+
+
+
 
 
                 if (showPopUpMessage)

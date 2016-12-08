@@ -78,7 +78,7 @@ Any developer using the Visual Studio IDE (any language, any file type) who curr
 
 - Each rule has a plain-English auto-generated summary explanation.
 
-- If a solution is opened whose name matches a rule, user is shown a summary of any modifications made.
+- If a solution is opened whose name matches a rule, user is shown a summary of any modifications made. This summary can be surpressed if no modifications were made.
 
 - Incomplete rules (e.g. without a file name) can be specified, and will simply be ignored when specified the solution is opened. 
 
