@@ -1,10 +1,11 @@
 # AutoFindReplace
 
-[![](https://img.shields.io/github/license/gittools/gitlink.svg)](/LICENSE.txt)
+[![Licence](https://img.shields.io/github/license/gittools/gitlink.svg)](/LICENSE.txt)
 [![Build status](https://ci.appveyor.com/api/projects/status/tcugu9rs3ihbgl7o?svg=true)](https://ci.appveyor.com/project/GregTrevellick/autofindreplace)
 ![](https://vsmarketplacebadge.apphb.com/version/GregTrevellick.AutoFindReplace.svg)
 <!--![](https://vsmarketplacebadge.apphb.com/installs/GregTrevellick.AutoFindReplace.svg)-->
 <!--![](https://vsmarketplacebadge.apphb.com/rating/GregTrevellick.AutoFindReplace.svg)-->
+[![Source Browser](https://img.shields.io/badge/Browse-Source-green.svg)](http://sourcebrowser.io/Browse/GregTrevellick/AutoFindReplace)
 
 Download this extension from the [VS Marketplace](https://marketplace.visualstudio.com/items?itemName=GregTrevellick.AutoFindReplace).
 
