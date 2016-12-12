@@ -48,10 +48,14 @@ namespace AutoFindReplace.Helpers
 
         private static void RemoveIncompleteRules(List<RulesDto> rulesDtos)
         {
-            rulesDtos.RemoveAll(x => string.IsNullOrEmpty(x.FindWhat));
-            rulesDtos.RemoveAll(x => string.IsNullOrEmpty(x.FileName));
-            rulesDtos.RemoveAll(x => string.IsNullOrEmpty(x.ProjectName));
-            rulesDtos.RemoveAll(x => string.IsNullOrEmpty(x.SolutionName));
+            rulesDtos.RemoveAll(x =>
+                string.IsNullOrEmpty(x.Comments) &&
+                string.IsNullOrEmpty(x.FindWhat) &&
+                string.IsNullOrEmpty(x.FileName) &&
+                string.IsNullOrEmpty(x.ProjectName) &&
+                string.IsNullOrEmpty(x.ReplaceWith) &&
+                string.IsNullOrEmpty(x.SolutionName) 
+            );
         }
 
         private static void ApplyTestingRules(List<RulesDto> rulesDtos)
