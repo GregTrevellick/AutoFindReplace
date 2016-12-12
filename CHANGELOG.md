@@ -2,9 +2,9 @@
 
 These are the changes to each version that has been released on the official Visual Studio extension gallery.
 
-## 1.2.xx
+## 1.2.84
 
-**2016-12-xx** <!--hh:mm UK / hh:mm UTC-->
+**2016-12-12** <!--07:45 UK / 07:45 UTC-->
 
 - [x] Auto-size the column widths for Rules in Options
 - [x] Added option to suppress results dialog if no modifications applied 

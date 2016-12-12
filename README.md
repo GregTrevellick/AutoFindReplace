@@ -21,9 +21,7 @@ With this extension installed Visual Studio will automatically perform a find/re
 
 If you like this *free* extension, please give it a [review](https://marketplace.visualstudio.com/items?itemName=GregTrevellick.AutoFindReplace#review-details).
 
-See the [change log](CHANGELOG.md) for road map and release history.
-
-Bugs can be logged [here](https://github.com/GregTrevellick/AutoFindReplace/issues).
+See the [change log](CHANGELOG.md) for road map and release history. Bugs can be logged [here](https://github.com/GregTrevellick/AutoFindReplace/issues).
 
 
 ## Example
