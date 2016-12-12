@@ -22,6 +22,9 @@ If you like this *free* extension, please give it a [review](https://marketplace
 
 See the [change log](CHANGELOG.md) for road map and release history.
 
+Bugs can be logged [here](https://github.com/GregTrevellick/AutoFindReplace/issues).
+
+
 ## Example
 
 The following options settings:

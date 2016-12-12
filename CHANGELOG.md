@@ -6,7 +6,6 @@ These are the changes to each version that has been released on the official Vis
 
 **2016-12-xx** <!--hh:mm UK / hh:mm UTC-->
 
-- [x] Publish the extension for VS2017
 - [x] Auto-size the column widths for Rules in Options
 - [x] Added option to suppress results dialog if no modifications applied 
 
@@ -62,7 +61,7 @@ These are the changes to each version that has been released on the official Vis
    - [ ] Publish the extension for VS2005 
    - [ ] Publish the extension for VS2008 
    - [ ] Publish the extension for VS2010 
-   
+   - [ ] Publish the extension for VS2017    
 
 
 
