@@ -104,7 +104,11 @@ namespace AutoFindReplace
             var dteSolutionName = Path.GetFileName(dteSolutionFullName).ToLower();
             projectPaths = new Dictionary<string, string>();
 
-            foreach (var rulesDto in rulesDtos.Where(x => x.Enabled && x.SolutionName.ToLower() == dteSolutionName))
+            foreach (var rulesDto in rulesDtos.Where(
+                x => x.Enabled && x.SolutionName.ToLower() == dteSolutionName &&
+                !string.IsNullOrEmpty(x.FindWhat) &&
+                !string.IsNullOrEmpty(x.FileName) && 
+                !string.IsNullOrEmpty(x.ProjectName)))
             {
                 matchingSolutionOpened = true;
 
