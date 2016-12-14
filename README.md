@@ -23,7 +23,6 @@ If you like this *free* extension, please give it a [review](https://marketplace
 
 See the [change log](CHANGELOG.md) for road map and release history. Bugs can be logged [here](https://github.com/GregTrevellick/AutoFindReplace/issues).
 
-
 ## Example
 
 The following options settings:
@@ -89,6 +88,7 @@ Any developer using the Visual Studio IDE (any language, any file type) who curr
 <!--COPY END FOR VS GALLERY-->
 
 ## Contribute
+
 Contributions to this project are welcome by raising an [Issue](https://github.com/GregTrevellick/AutoFindReplace/issues) or submitting a [Pull Request](https://github.com/GregTrevellick/AutoFindReplace/pulls).
 
 A zip file containing the sample JoePublic.Sln (used for sample screen shots) has been made available [here](https://github.com/GregTrevellick/AutoFindReplace/blob/master/JoePublic.zip).
@@ -96,6 +96,7 @@ A zip file containing the sample JoePublic.Sln (used for sample screen shots) ha
 The rules specified in the example screen shots above can be implemented locally by setting the 'applyTestRules' property of [RulesHelper.cs](https://github.com/GregTrevellick/AutoFindReplace/blob/master/AutoFindReplace/Helpers/RulesHelper.cs) to 'true'.
 
 ## License
+
 [MIT](/LICENSE.txt)
 
 ## Credits
