@@ -2,9 +2,9 @@
 
 These are the changes to each version that has been released on the official Visual Studio extension gallery.
 
-## 1.2.xx
+## 1.2.107
 
-**2016-12-dd** <!--hh:mm UK / hh:mm UTC-->
+**2016-12-22** <!--22:00 UK / 22:00 UTC-->
 
 - [x] Bug fixes
   - [x] Partially defined rules not displayed in Tools > Options > Rules
