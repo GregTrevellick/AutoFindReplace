@@ -7,8 +7,8 @@
     <MoreInfo>https://github.com/GregTrevellick/AutoFindReplace</MoreInfo>
     <License>LICENSE.txt</License>
     <ReleaseNotes>https://github.com/GregTrevellick/AutoFindReplace/blob/master/CHANGELOG.md</ReleaseNotes>
-    <Icon>Resources\ExtensionIcon_90x90.png</Icon>
-    <PreviewImage>Resources\ExtensionPreview_175x175.png</PreviewImage>
+    <Icon>Resources\VsixExtensionIcon_90x90.png</Icon>
+    <PreviewImage>Resources\VsixExtensionPreview_175x175.png</PreviewImage>
     <Tags>find, replace, automatic, text, change, controlF, controlH, ctlF, ctlH</Tags>
   </Metadata>
   <Installation>
