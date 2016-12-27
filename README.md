@@ -27,17 +27,17 @@ See the [change log](CHANGELOG.md) for road map and release history. Bugs can be
 
 The following options settings:
 
-![](AutoFindReplace/Resources/ScreenShot_General.png)
+![](AutoFindReplace/Resources/ReadMeScreenShot_OptionsGeneral.png)
 
-![](AutoFindReplace/Resources/ScreenShot_Rules.png)
+![](AutoFindReplace/Resources/ReadMeScreenShot_OptionsRules.png)
 
 For the following solution:
 
-![](AutoFindReplace/Resources/Screenshot_Solution.png)
+![](AutoFindReplace/Resources/ReadMeScreenShot_Solution.png)
 
 Result in the following outcome when opened:
 
-![](AutoFindReplace/Resources/ScreenShot_ResultsWindow.png)
+![](AutoFindReplace/Resources/ReadMeScreenShot_ResultsWindow.png)
 
 ## Who Is This Extension For ?
 
