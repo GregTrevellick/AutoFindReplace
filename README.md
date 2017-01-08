@@ -9,7 +9,7 @@
 
 Download this extension from the [VS Marketplace](https://marketplace.visualstudio.com/items?itemName=GregTrevellick.AutoFindReplace).
 
-![](chart.png)
+[![](chart.png)][VSMarketplaceUrl]
 
 ---------------------------------------
 
