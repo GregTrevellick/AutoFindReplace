@@ -19,8 +19,6 @@
 
 Download this extension from the [VS Marketplace][VSMarketplaceUrl].
 
-[![](chart.png)][VSMarketplaceUrl]
-
 ---------------------------------------
 
 <!--COPY START FOR VS GALLERY-->
@@ -126,3 +124,5 @@ The following authors / articles deserve special mention for their help whilst c
 [Daniel Schroeder](http://blog.danskingdom.com/category/visual-studio-extensions/)
 
 [Sho Sato](https://vsmarketplacebadge.apphb.com/)
+
+[![](chart.png)][VSMarketplaceUrl]
