@@ -75,7 +75,7 @@ These are the changes to each version that has been released on the official Vis
 
 
 
-<!--MEDIUM dummy change-->
+<!--MEDIUM dummy2 change-->
 <!--Add a count of diabled rules to the Results dialog-->
 <!--Publish the extension for VS2010 -->
 <!--Publish the extension for VS2005/2008-->
