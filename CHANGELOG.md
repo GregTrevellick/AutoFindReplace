@@ -82,6 +82,3 @@ These are the changes to each version that has been released on the official Vis
 <!--sign the extension - not required for auto updates ! activity log ? github.com/mwrock/PowerShell/tree/master/src/signing-->
 <!--allow sorting of rules-->
 <!--http://sourcebrowser.io/Browse/GregTrevellick/AutoFindReplace-->
-
-
-<!--gregt-->
