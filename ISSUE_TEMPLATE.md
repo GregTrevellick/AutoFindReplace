@@ -16,5 +16,3 @@ Explain what it's doing and why it's wrong
 
 ### Expected behavior
 Explain what it should be doing after it's fixed.
-
-<!--dummy gregt-->
