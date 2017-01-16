@@ -4,6 +4,7 @@
 [GitHubRepoIssuesURL]: https://github.com/GregTrevellick/AutoFindReplace/issues
 [GitHubRepoPullRequestsURL]: https://github.com/GregTrevellick/AutoFindReplace/pulls
 [VersionNumberBadgeURL]: https://vsmarketplacebadge.apphb.com/version/GregTrevellick.AutoFindReplace.svg
+[VisualStudioURL]: https://www.visualstudio.com/
 [VSMarketplaceUrl]: https://marketplace.visualstudio.com/items?itemName=GregTrevellick.AutoFindReplace
 [VSMarketplaceReviewsUrl]: https://marketplace.visualstudio.com/items?itemName=GregTrevellick.AutoFindReplace#review-details
 
@@ -23,13 +24,13 @@ Download this extension from the [VS Marketplace][VSMarketplaceUrl].
 
 <!--COPY START FOR VS GALLERY-->
 
-This [Visual Studio](https://www.visualstudio.com/) extension will automatically find and replace specified text within specified files when a solution is opened.
+This [Visual Studio][VisualStudioUrl] extension will automatically find and replace specified text within specified files when a solution is opened.
 
 The intention is to eliminate repetitive manual code modifications that a developer may find neccessary for certain Visual Studio solutions.
 
 With this extension installed Visual Studio will automatically perform a find/replace action on specified file(s) within a specified project upon opening a named solution.
 
-If you like this *free* extension, please give it a [review][VSMarketplaceReviewsUrl].
+If you like this ***free*** extension, please give it a [review][VSMarketplaceReviewsUrl].
 
 See the [change log](CHANGELOG.md) for road map and release history. Bugs can be logged [here][GitHubRepoIssuesURL].
 
