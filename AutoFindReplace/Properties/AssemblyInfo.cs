@@ -1,4 +1,5 @@
-﻿using System.Reflection;
+﻿using AutoFindReplace;
+using System.Reflection;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 
@@ -6,13 +7,13 @@ using System.Runtime.InteropServices;
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
 [assembly: AssemblyTitle("AutoFindReplace")]
-[assembly: AssemblyDescription("Visual Studio extension to automatically find and replace specified text within specified files when a solution is opened")]
+[assembly: AssemblyDescription(Vsix.Description)]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("Greg Trevellick")]
+[assembly: AssemblyCompany(Vsix.Author)]
 [assembly: AssemblyProduct("AutoFindReplace")]
-[assembly: AssemblyCopyright("Greg Trevellick 2016")]
+[assembly: AssemblyCopyright(Vsix.Author)]
 [assembly: AssemblyTrademark("")]
-[assembly: AssemblyCulture("")]
+[assembly: AssemblyCulture(Vsix.Language)]
 
 // Setting ComVisible to false makes the types in this assembly not visible 
 // to COM components.  If you need to access a type in this assembly from 
