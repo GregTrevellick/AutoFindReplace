@@ -16,7 +16,7 @@ namespace AutoFindReplace
 {
     [ProvideAutoLoad(UIContextGuids80.SolutionExists)]
     [PackageRegistration(UseManagedResourcesOnly = true)]
-    [InstalledProductRegistration("#110", "#112", "1.0", IconResourceID = 400)] // Info on this package for Help/About    
+    [InstalledProductRegistration("#110", "#112", Vsix.Version, IconResourceID = 400)] // Info on this package for Help/About    
     [Guid("5e45aa4e-1a24-4edf-b10a-228b63448f70")]
     [ProvideOptionPage(typeof(GeneralOptions), Helpers.Constants.CategoryName, "General", 0, 0, true)]
     [ProvideOptionPage(typeof(RulesOptions), Helpers.Constants.CategoryName, "Rules", 0, 0, true)]
