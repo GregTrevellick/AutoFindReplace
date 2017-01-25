@@ -11,7 +11,7 @@ namespace AutoFindReplace
         public const string Name = "AutoFindReplace";
         public const string Description = @"Automatically perform a find/replace action on individual file(s) within a specified project(s) upon opening a named solution. ";
         public const string Language = "en-US";
-        public const string Version = "1.2.107";
+        public const string Version = "1.3.0";
         public const string Author = "Greg Trevellick";
         public const string Tags = "find, replace, automatic, text, change, controlF, controlH, ctlF, ctlH";
     }
