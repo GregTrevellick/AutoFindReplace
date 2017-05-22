@@ -2,24 +2,25 @@
 
 These are the changes to each version that has been released on the official Visual Studio extension gallery.
 
+## 1.3.1
+**2017-05-22**
+- [x] Enable usage within VS2017
+
 ## 1.2.107
 
-**2016-12-22** <!--22:00 UK / 22:00 UTC-->
-
+**2016-12-22** 
 - [x] Bug fixes
   - [x] Partially defined rules not displayed in Tools > Options > Rules
 
 ## 1.2.84
 
-**2016-12-12** <!--07:45 UK / 07:45 UTC-->
-
+**2016-12-12** 
 - [x] Auto-size the column widths for Rules in Options
 - [x] Added option to suppress results dialog if no modifications applied 
 
 ## 1.2.68
 
-**2016-12-05** <!--18:30 UK / 18:30 UTC-->
-
+**2016-12-05**
 - [x] Updates for VS Marketplace
 
 ## 1.2.64
