@@ -8,6 +8,7 @@
 [VSMarketplaceUrl]: https://marketplace.visualstudio.com/items?itemName=GregTrevellick.AutoFindReplace
 [VSMarketplaceReviewsUrl]: https://marketplace.visualstudio.com/items?itemName=GregTrevellick.AutoFindReplace#review-details
 [CharityWareURL]: https://github.com/GregTrevellick/MiscellaneousArtefacts/wiki/Charity-Ware
+[WhyURL]: https://github.com/GregTrevellick/MiscellaneousArtefacts/wiki/Why
 
 # AutoFindReplace
 
@@ -75,6 +76,8 @@ Any developer using the Visual Studio IDE (any language, any file type) who curr
  - You have a Master Page, and every time you open a new branch of your solution you manually and repeatedly change the page header to contain a phrase such as "Local Work-In-Progress" to aid user interpretation of any screen shots you produce.
   
  - Many more. *If you have a use-case you would like listed here, just let me know via a review on the [VS Gallery][VSMarketplaceReviewsUrl].*
+ 
+ [Why?][WhyURL]
  
 ## Features
 
