@@ -1,2 +1,7 @@
 language: csharp
 solution: AutoFindReplace.sln
+notifications:
+  email:
+    recipients:
+      - gtrevellick@googlemail.com
+    on_change: always
