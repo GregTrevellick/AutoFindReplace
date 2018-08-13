@@ -7,7 +7,7 @@ These are the changes to each version that has been released on the official Vis
 - [x] Enable usage within VS2017
 
 ## 1.2.107 
-
+ 
 **2016-12-22** 
 - [x] Bug fixes
   - [x] Partially defined rules not displayed in Tools > Options > Rules
