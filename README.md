@@ -14,6 +14,7 @@
 
 <!--BadgesSTART-->
 <!-- Powered by https://github.com/GregTrevellick/ReadMeSynchronizer -->
+
 [![BetterCodeHub compliance](https://bettercodehub.com/edge/badge/GregTrevellick/AutoFindReplace?branch=master)](https://bettercodehub.com/results/GregTrevellick/AutoFindReplace)
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/e0cb8a23f42c4859aeb5c653b1a3d2b6)](https://www.codacy.com/project/gtrevellick/AutoFindReplace/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=GregTrevellick/AutoFindReplace&amp;utm_campaign=Badge_Grade_Dashboard)
 [![CodeFactor](https://www.codefactor.io/repository/github/GregTrevellick/AutoFindReplace/badge)](https://www.codefactor.io/repository/github/GregTrevellick/AutoFindReplace)
@@ -30,6 +31,7 @@
 [![Visual Studio Marketplace ratings](https://vsmarketplacebadge.apphb.com/rating/GregTrevellick.AutoFindReplace.svg)](https://marketplace.visualstudio.com/items?itemName=GregTrevellick.AutoFindReplace)
 [![Visual Studio Marketplace version](https://vsmarketplacebadge.apphb.com/version/GregTrevellick.AutoFindReplace.svg)](https://marketplace.visualstudio.com/items?itemName=GregTrevellick.AutoFindReplace)
 <!--BadgesEND-->
+
 
 
 
