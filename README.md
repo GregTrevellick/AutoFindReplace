@@ -22,7 +22,8 @@
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/e0cb8a23f42c4859aeb5c653b1a3d2b6)](https://www.codacy.com/project/gtrevellick/AutoFindReplace/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=GregTrevellick/AutoFindReplace&amp;utm_campaign=Badge_Grade_Dashboard)
 
 [![CodeFactor](https://www.codefactor.io/repository/github/GregTrevellick/AutoFindReplace/badge)](https://www.codefactor.io/repository/github/GregTrevellick/AutoFindReplace)
-[![Inspecode Report](https://inspecode.rocro.com/badges/github.com/GregTrevellick/AutoFindReplace/report?token=tFEtqaxk--yMEhQpaaX987zz1-db0N_5CUbAlCF9bkM)](https://inspecode.rocro.com/reports/github.com/GregTrevellick/AutoFindReplace/branch/master/summary)
+[![DepShield](https://depshield.sonatype.org/badges/GregTrevellick/AutoFindReplace/depshield.svg)](https://depshield.github.io)
+[![InspecodeRocro Report](https://inspecode.rocro.com/badges/github.com/GregTrevellick/AutoFindReplace/report?token=tFEtqaxk--yMEhQpaaX987zz1-db0N_5CUbAlCF9bkM)](https://inspecode.rocro.com/reports/github.com/GregTrevellick/AutoFindReplace/branch/master/summary)
 
 
 [![GitHub top language](https://img.shields.io/github/languages/top/GregTrevellick/AutoFindReplace.svg)](https://github.com/GregTrevellick/AutoFindReplace)
@@ -43,7 +44,7 @@
 [![Appveyor Build status](https://ci.appveyor.com/api/projects/status/2iy2c8ucrn5mc96o?svg=true)](https://ci.appveyor.com/project/GregTrevellick/AutoFindReplace)
 [![Appveyor unit tests](https://img.shields.io/appveyor/tests/GregTrevellick/AutoFindReplace.svg)](https://ci.appveyor.com/project/GregTrevellick/AutoFindReplace/build/tests)
 [![Azure Build Status](https://gregtrevellick.visualstudio.com/AutoFindReplace/_apis/build/status/AutoFindReplace)](https://gregtrevellick.visualstudio.com/AutoFindReplace/_build/latest?definitionId=4)
-[![Inspecode Job Status](https://inspecode.rocro.com/badges/github.com/GregTrevellick/AutoFindReplace/status?token=tFEtqaxk--yMEhQpaaX987zz1-db0N_5CUbAlCF9bkM)](https://inspecode.rocro.com/jobs/github.com/GregTrevellick/AutoFindReplace/latest?completed=true)
+[![InspecodeRocro Job Status](https://inspecode.rocro.com/badges/github.com/GregTrevellick/AutoFindReplace/status?token=tFEtqaxk--yMEhQpaaX987zz1-db0N_5CUbAlCF9bkM)](https://inspecode.rocro.com/jobs/github.com/GregTrevellick/AutoFindReplace/latest?completed=true)
 [![Hound](https://img.shields.io/badge/hound_ci-checked-brightgreen.svg)](https://houndci.com/)
 [![Access Lint github](https://img.shields.io/badge/a11y-checked-brightgreen.svg)](https://www.accesslint.com)
 [![ImgBot](https://img.shields.io/badge/images-optimized-brightgreen.svg)](https://imgbot.net/)
