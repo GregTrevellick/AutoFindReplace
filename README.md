@@ -22,7 +22,6 @@
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/e0cb8a23f42c4859aeb5c653b1a3d2b6)](https://www.codacy.com/project/gtrevellick/AutoFindReplace/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=GregTrevellick/AutoFindReplace&amp;utm_campaign=Badge_Grade_Dashboard)
 
 [![CodeFactor](https://www.codefactor.io/repository/github/GregTrevellick/AutoFindReplace/badge)](https://www.codefactor.io/repository/github/GregTrevellick/AutoFindReplace)
-[![DepShield](https://depshield.sonatype.org/badges/GregTrevellick/AutoFindReplace/depshield.svg)](https://depshield.github.io)
 [![InspecodeRocro Report](https://inspecode.rocro.com/badges/github.com/GregTrevellick/AutoFindReplace/report?token=tFEtqaxk--yMEhQpaaX987zz1-db0N_5CUbAlCF9bkM)](https://inspecode.rocro.com/reports/github.com/GregTrevellick/AutoFindReplace/branch/master/summary)
 
 
