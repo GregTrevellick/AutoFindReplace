@@ -9,7 +9,7 @@
     <ReleaseNotes>https://github.com/GregTrevellick/AutoFindReplace/blob/master/CHANGELOG.md</ReleaseNotes>
     <Icon>Resources\VsixExtensionIcon_90x90.png</Icon>
     <PreviewImage>Resources\VsixExtensionPreview_175x175.png</PreviewImage>
-    <Tags>find, replace, automatic, text, change, controlF, controlH, ctlF, ctlH</Tags>
+    <Tags>find; replace; automatic; text; change; controlF; controlH; control-F; control-H; control F; control H;</Tags>
   </Metadata>
   <Installation>
     <InstallationTarget Id="Microsoft.VisualStudio.Pro" Version="[11.0,16.0)" />
