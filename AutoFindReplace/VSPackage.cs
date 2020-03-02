@@ -15,7 +15,7 @@ using System.Runtime.InteropServices;
 namespace AutoFindReplace
 {
     [ProvideAutoLoad(UIContextGuids80.SolutionExists)]
-    [PackageRegistration(UseManagedResourcesOnly = true)]
+    [PackageRegistration(UseManagedResourcesOnly = true, AllowsBackgroundLoading = true)]
     [InstalledProductRegistration(productName: "#110", productDetails: "#112", productId: Vsix.Version, IconResourceID = 400)]
     [Guid("5e45aa4e-1a24-4edf-b10a-228b63448f70")]
     [ProvideOptionPage(typeof(GeneralOptions), Helpers.Constants.CategoryName, "General", 0, 0, true)]
