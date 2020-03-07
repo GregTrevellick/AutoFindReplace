@@ -47,6 +47,9 @@
 [![Visual Studio Marketplace downloads](https://vsmarketplacebadge.apphb.com/installs/GregTrevellick.AutoFindReplace.svg)](https://marketplace.visualstudio.com/items?itemName=GregTrevellick.AutoFindReplace)
 [![Visual Studio Marketplace ratings](https://vsmarketplacebadge.apphb.com/rating/GregTrevellick.AutoFindReplace.svg)](https://marketplace.visualstudio.com/items?itemName=GregTrevellick.AutoFindReplace)
 [![Visual Studio Marketplace version](https://vsmarketplacebadge.apphb.com/version/GregTrevellick.AutoFindReplace.svg)](https://marketplace.visualstudio.com/items?itemName=GregTrevellick.AutoFindReplace)
+
+
+
 <!--BadgesEND-->
 
 
