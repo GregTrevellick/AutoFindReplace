@@ -45,7 +45,7 @@
 [![Renovate Bot github](https://img.shields.io/badge/renovatebot-checked-brightgreen.svg)](https://renovatebot.com/)
 [![Charity Ware](https://img.shields.io/badge/charity%20ware-thank%20you-brightgreen.svg)](https://github.com/GregTrevellick/MiscellaneousArtefacts/wiki/Charity-Ware)
 [![License](https://img.shields.io/github/license/gittools/gitlink.svg)](/LICENSE.txt)
-[![Subscribe](https://img.shields.io/badge/subscribe-to%20follow-grey.svg)](https://github.com/GregTrevellick/AutoFindReplace/subscription)
+[![Subscribe](https://img.shields.io/badge/subscribe%20to%20receive%20notificatons-grey.svg)](https://github.com/GregTrevellick/AutoFindReplace/subscription)
 
 [![Visual Studio Marketplace version](https://img.shields.io/badge/-AutoFindReplace-%23e2165e.svg)](https://marketplace.visualstudio.com/items?itemName=GregTrevellick.AutoFindReplace)
 [![Visual Studio Marketplace downloads](https://vsmarketplacebadge.apphb.com/installs/GregTrevellick.AutoFindReplace.svg)](https://marketplace.visualstudio.com/items?itemName=GregTrevellick.AutoFindReplace)
