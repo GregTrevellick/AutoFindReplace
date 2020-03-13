@@ -20,9 +20,6 @@
 <!-- no md -->
 [![CodeFactor](https://www.codefactor.io/repository/github/GregTrevellick/AutoFindReplace/badge)](https://www.codefactor.io/repository/github/GregTrevellick/AutoFindReplace)
 <!-- no md -->
-<!-- no md -->
-<!-- no md -->
-<!-- no md -->
 [![GitHub top language](https://img.shields.io/github/languages/top/GregTrevellick/AutoFindReplace.svg)](https://github.com/GregTrevellick/AutoFindReplace)
 [![Github language count](https://img.shields.io/github/languages/count/GregTrevellick/AutoFindReplace.svg)](https://github.com/GregTrevellick/AutoFindReplace)
 [![GitHub issues](https://img.shields.io/github/issues-raw/GregTrevellick/AutoFindReplace.svg)](https://github.com/GregTrevellick/AutoFindReplace/issues)
