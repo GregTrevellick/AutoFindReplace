@@ -20,6 +20,7 @@
  [![CodeFactor](https://www.codefactor.io/repository/github/GregTrevellick/AutoFindReplace/badge)](https://www.codefactor.io/repository/github/GregTrevellick/AutoFindReplace)
     [![GitHub top language](https://img.shields.io/github/languages/top/GregTrevellick/AutoFindReplace.svg)](https://github.com/GregTrevellick/AutoFindReplace)
 [![Github language count](https://img.shields.io/github/languages/count/GregTrevellick/AutoFindReplace.svg)](https://github.com/GregTrevellick/AutoFindReplace)
+[![GitHub actions](https://github.com/GregTrevellick/AutoFindReplace/workflows/.NET%20Core%20CI/badge.svg)](https://github.com/GregTrevellick/AutoFindReplace/actions)
 [![GitHub issues](https://img.shields.io/github/issues-raw/GregTrevellick/AutoFindReplace.svg)](https://github.com/GregTrevellick/AutoFindReplace/issues)
 [![GitHub pull requests](https://img.shields.io/github/issues-pr-raw/GregTrevellick/AutoFindReplace.svg)](https://github.com/GregTrevellick/AutoFindReplace/pulls)
 [![GitHub followers](https://img.shields.io/github/followers/GregTrevellick.svg)](https://github.com/GregTrevellick?tab=followers)
