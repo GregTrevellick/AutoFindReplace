@@ -14,10 +14,10 @@ jobs:
       uses: NuGet/setup-nuget@v1.0.2      
       
     - name: Restore Packages
-      run: nuget restore EzRep.sln
+      run: nuget restore ./AutoFindReplace.sln
 
     - name: Setup MSBuild
       uses: microsoft/setup-msbuild@v1     
 
     - name: Build Solution
-      run: msbuild.exe EzRep.sln /p:platform="Any CPU" /p:configuration="Release"      
+      run: msbuild.exe ./AutoFindReplace.sln /p:platform="Any CPU" /p:configuration="Release" 
