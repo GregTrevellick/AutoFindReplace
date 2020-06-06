@@ -8,16 +8,22 @@ jobs:
   build:
     runs-on: windows-latest   #ubuntu-latest
     steps:
-    - uses: actions/checkout@v2
-    
+    #- uses: actions/checkout@v2
+    - uses: actions/checkout@v1
+
+    - name: Setup MSBuild
+      uses: microsoft/setup-msbuild@v1   
+    #- name: Setup MSBuild Path
+    #  uses: warrenbuckley/Setup-MSBuild@v1
+      
     - name: Setup NuGet
       uses: NuGet/setup-nuget@v1.0.2      
       
-    - name: Restore Packages
+    #- name: Restore Packages
+    #  run: nuget restore AutoFindReplace.sln
+    - name: Restore NuGet Packages
       run: nuget restore AutoFindReplace.sln
-
-    - name: Setup MSBuild
-      uses: microsoft/setup-msbuild@v1     
-
+      
     - name: Build Solution
-      run: msbuild.exe AutoFindReplace.sln /p:platform="Any CPU" /p:configuration="Release" 
+      #run: msbuild.exe AutoFindReplace.sln /p:platform="Any CPU" /p:configuration="Release" 
+      run: msbuild AutoFindReplace.sln /p:Configuration=Release           #/p:DeployOnBuild=true /p:PublishProfile=FolderProfile
