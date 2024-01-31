@@ -17,7 +17,7 @@ jobs:
     #  uses: warrenbuckley/Setup-MSBuild@v1
       
     - name: Setup NuGet
-      uses: NuGet/setup-nuget@v1.0.2      
+      uses: NuGet/setup-nuget@v2.0.0      
       
     #- name: Restore Packages
     #  run: nuget restore AutoFindReplace.sln
